@@ -41,22 +41,11 @@
 
 <body>
     <div id="tools">
-        <select id="chart-chooser" onchange="showCharts();">
-            <option value="all">All modules</option>
-            <option value="synapse" selected>Synapse-only</option>
-        </select>
         <button onclick="resetZoom();">Click to Reset Zoom</button>
     </div>
 
     <div>
-        <canvas id="all" style="display: none;"></canvas>
-        <canvas id="synapse"></canvas>
-    </div>
-
-    <div>
-        Synapse has traditionally used <a href="https://twistedmatrix.com/documents/current/api/twisted.internet.defer.html#inlineCallbacks"><code>inlineCallbacks</code></a>
-        to have readable asynchronous code. Now that only Python 3 is supported, native async / await syntax can be used.
-        This helps identify where performance is going (and helps find errors) due to giving saner stack traces.
+        <canvas id="chart"></canvas>
     </div>
 
     <div>
@@ -65,17 +54,9 @@
 
     <div>
         <h3>Details of latest snapshot</h3>
-        <h5>Commit <span id="snapshot-commit"></span></h5>
         <h5>From <span id="snapshot-when"></span></h5>
 
-        <table id="snapshot">
-            <tr>
-                <th>Module</th>
-                <th>inlineCallbacks<br>cachedInlineCallbacks</th>
-                <th>ensureDeferred<br>maybeDeferred<br>succeed<br>failure</th>
-                <th>async</th>
-            </tr>
-        </table>
+        <table id="snapshot"></table>
     </div>
 
     <script>
@@ -85,7 +66,7 @@
                 responsive: true,
                 title: {
                     display: true,
-                    text: 'Are We Async Yet?'
+                    text: 'Are We TS Yet?'
                 },
                 tooltips: {
                     mode: 'index',
@@ -97,7 +78,7 @@
                     xAxes: [{
                         type: 'time',
                         time: {
-                            "unit": "month",
+                            "unit": "day",
                         },
                         distribution: 'series',
                         scaleLabel: {
@@ -109,7 +90,7 @@
                         stacked: true,
                         scaleLabel: {
                             display: true,
-                            labelString: 'Count'
+                            labelString: 'SLOC'
                         }
                     }]
                 },
@@ -126,117 +107,105 @@
             }
         };
 
-        function sum_data(data, module) {
-            let sum = 0;
-            for (let module_name in data) {
-                if (module_name.startsWith(module + "/")) {
-                    sum += data[module_name];
-                }
-            }
-            return sum;
-        }
-
         fetch("results.json").then(response => response.json()).then(data => {
-            for (let id of ['all', 'synapse']) {
-                // Generate the data points from the raw data.
-                let labels = [];
-                let inlineCallbacks = [];
-                let deferreds = []
-                let asyncDefs = [];
+            const extSet = new Set();
+            for (const [date, repos] of data) {
+                for (const [repoName, sha, extLoc] of repos) {
+                    for (const ext in extLoc) {
+                        // group TSX into TS
+                        if (ext === "tsx") {
+                            extLoc["ts"] = (extLoc["ts"] || 0) + extLoc[ext];
+                            delete extLoc[ext];
+                            continue;
+                        }
 
-                for (let d of data.reverse()) {
-                    labels.push(d[1]);
-                    // If looking at all data, pull the total out, otherwise
-                    // look for module specific data.
-                    if (id == 'all') {
-                        inlineCallbacks.push(d[2][0]);
-                        deferreds.push(d[3][0]);
-                        asyncDefs.push(d[4][0]);
-                    } else {
-                        inlineCallbacks.push(sum_data(d[2][1], id));
-                        deferreds.push(sum_data(d[3][1], id));
-                        asyncDefs.push(sum_data(d[4][1], id));
+                        extSet.add(ext);
                     }
                 }
-
-                // Finish up the config.
-                let config = Object.assign({}, configTemplate);
-                config.data = {
-                    labels: labels,
-                    datasets: [
-                        {
-                            label: 'inlineCallbacks / cachedInlineCallbacks',
-                            borderColor: "rgb(255, 99, 132)",  // Red
-                            backgroundColor: "rgb(255, 99, 132)",
-                            data: inlineCallbacks,
-                        },
-                        {
-                            label: 'ensureDeferred / maybeDeferred / succeed / failure',
-                            borderColor: "rgb(75, 192, 192)",  // Green
-                            backgroundColor: "rgb(75, 192, 192)",
-                            data: deferreds,
-                        },
-                        {
-                            label: 'async',
-                            borderColor: "rgb(54, 162, 235)",  // Blue
-                            backgroundColor: "rgb(54, 162, 235)",
-                            data: asyncDefs,
-                        },
-                    ]
-                };
-
-                // Render the graph.
-                let ctx = document.getElementById(id).getContext('2d');
-
-                window[id] = new Chart(ctx, config);
             }
+
+            // remove ignored extensions
+            extSet.delete("html");
+            extSet.delete("scss");
+
+            const extensions = [...extSet];
+
+            // Generate the data points from the raw data.
+            let labels = [];
+            const langs = {};
+
+            for (const ext of extensions) {
+                langs[ext] = [];
+            }
+
+            let i = 0;
+            for (const [date, repos] of data) {
+                labels.push(date);
+                for (const [repoName, sha, extLoc] of repos) {
+                    for (const ext of extensions) {
+                        if (!langs[ext][i]) langs[ext][i] = 0;
+                        langs[ext][i] += extLoc[ext] || 0;
+                    }
+                }
+                i++;
+            }
+
+            const colors = [
+                ["rgb(255, 99, 132)", "rgb(255, 99, 132)"],
+                ["rgb(75, 192, 192)", "rgb(75, 192, 192)"],
+                ["rgb(54, 162, 235)", "rgb(54, 162, 235)"],
+                ["rgb(235, 217, 54)", "rgb(235, 217, 54)"],
+            ];
+
+            // Finish up the config.
+            let config = Object.assign({}, configTemplate);
+            config.data = {
+                labels: labels,
+                datasets: Object.keys(langs).map((ext, i) => ({
+                    label: ext,
+                    borderColor: colors[i][0],
+                    backgroundColor: colors[i][1],
+                    data: langs[ext],
+                })),
+            };
+            console.log("@@", config.data);
+
+            // Render the graph.
+            let ctx = document.getElementById("chart").getContext('2d');
+
+            window["chart"] = new Chart(ctx, config);
 
             // Also fill in the snapshot table.
-            let snapshot = data[0];
-            document.getElementById("snapshot-commit").innerText = snapshot[0];
-            document.getElementById("snapshot-when").innerText = snapshot[1];
-            let modules = {};
-            let idxs = [2, 3, 4];
-            for (let i = 0; i < idxs.length; ++i) {
-                let idx = idxs[i];
+            let [date, repos] = data[data.length - 1];
+            document.getElementById("snapshot-when").innerText = date;
 
-                // Iterate each module in the data and add the counts.
-                for (let module_name in snapshot[idx][1]) {
-                    let count = snapshot[idx][1][module_name];
-                    if (!modules[module_name]) {
-                        // Fill previous entries with 0.
-                        let data = [];
-                        for (let j = 0; j < i; ++j) {
-                            data.push(0);
-                        }
-                        modules[module_name] = data;
-                    }
-                    modules[module_name].push(count);
-                }
+            /////////////////////////////////////
 
-                // Iterate each module in the mapping and ensure they have the
-                // proper number of entries.
-                if (i == 0) {
-                    continue;
-                }
-                for (let module_name in modules) {
-                    if (modules[module_name].length < (i + 1)) {
-                        modules[module_name].push(0);
-                    }
-                }
+            let snapshot_table = document.getElementById("snapshot");
+
+            // populate header
+            const row = document.createElement("tr");
+            for (const label of ["Repo", ...extensions]) {
+                const cell = document.createElement("th");
+                cell.innerText = label;
+                row.appendChild(cell);
             }
+            snapshot_table.appendChild(row);
 
             // Finally, actually fill in the table.
-            let module_names = Object.keys(modules).sort();
-            let snapshot_table = document.getElementById("snapshot");
-            for (let module_name of module_names) {
-                let row = document.createElement("tr");
-                let cell = document.createElement("th");
+            for (const [repoName, sha, extLoc] of repos) {
+                const row = document.createElement("tr");
+                const cell = document.createElement("th");
                 cell.className = "left";
-                cell.innerText = module_name.replace("/", ".");
+
+                const anchor = document.createElement("a");
+                anchor.href = `https://github.com/${repoName}/commit/${sha}`;
+                anchor.innerText = repoName;
+                cell.appendChild(anchor);
                 row.appendChild(cell);
-                for (let count of modules[module_name]) {
-                    cell = document.createElement("td");
+
+                for (const count of extensions.map(ext => extLoc[ext] || 0)) {
+                    const cell = document.createElement("td");
                     cell.innerText = count;
                     row.appendChild(cell);
                 }
@@ -245,22 +214,7 @@
         });
 
         function resetZoom() {
-            for (let id in ['all', 'synapse']) {
-                window[id].resetZoom();
-            }
-        }
-
-        function showCharts() {
-            console.log("HI")
-            let select = document.getElementById('chart-chooser');
-            for (let option of select.children) {
-                let chart = document.getElementById(option.getAttribute('value'));
-                if (option.selected) {
-                    chart.style.display = 'block';
-                } else {
-                    chart.style.display = 'none';
-                }
-            }
+            window["chart"].resetZoom();
         }
     </script>
 </body>
