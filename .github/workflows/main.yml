@@ -20,6 +20,18 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        
+      # Cache pip deps
+      - uses: actions/cache@v2
+        id: cache
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip
+
+      # Install Python libraries
+      - name: Install gitpython
+        run: python3 -m pip install gitpython
+        if: steps.cache.outputs.cache-hit != 'true'
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
