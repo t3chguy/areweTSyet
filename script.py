@@ -41,7 +41,7 @@ def scan(repo):
         "--keys", "source",
         "--format-option", "no-head",
     ]
-    print("Scanning", repo.working_dir)
+    print("Scanning", repo.working_dir, "".join(args))
 
     by_extension = defaultdict(int)
     res = subprocess.run(
@@ -49,6 +49,8 @@ def scan(repo):
         capture_output=True,
         shell=True,
         cwd=repo.working_dir)
+
+    print("DEBUG:", res.stdout.decode("utf-8"))
 
     for line in res.stdout.splitlines():
         l = line.decode("utf-8")[2:-2]
