@@ -41,11 +41,10 @@ def scan(repo):
     res = subprocess.run(
         f"sloc --format cli-table --keys source --format-option no-head {repo.working_dir}/src",
         stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
+        # stderr=subprocess.STDOUT,
         shell=True,
         cwd=repo.working_dir)
 
-    print("DEBUG:")
     print(res.stdout.decode("utf-8"))
 
     for line in res.stdout.splitlines():
@@ -63,8 +62,6 @@ REPOS = list(map(get_repo, REPO_NAMES))
 
 results = []
 for i, repo in enumerate(REPOS):
-    repo.remotes[0].pull()
-
     commit = repo.head.commit
     result = scan(repo)
 
@@ -86,6 +83,8 @@ existing_data.append((
         x,
     ) for i, x in enumerate(results)],
 ))
+
+sorted(existing_data, key=lambda x: x[0])
 
 with open("results.json", "w") as f:
     f.write(json.dumps(existing_data, indent=4))

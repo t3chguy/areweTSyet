@@ -78,7 +78,7 @@
                     xAxes: [{
                         type: 'time',
                         time: {
-                            "unit": "day",
+                            "unit": "week",
                         },
                         distribution: 'series',
                         scaleLabel: {
@@ -127,6 +127,7 @@
             // remove ignored extensions
             extSet.delete("html");
             extSet.delete("scss");
+            extSet.delete("svg");
 
             const extensions = [...extSet];
 
