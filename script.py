@@ -46,7 +46,8 @@ def scan(repo):
     by_extension = defaultdict(int)
     res = subprocess.run(
         args,
-        capture_output=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
         shell=True,
         cwd=repo.working_dir)
 
