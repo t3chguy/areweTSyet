@@ -36,18 +36,17 @@ def get_repo(repo_name):
 
 def scan(repo):
     args = [
-        "sloc", f"{repo.working_dir}/src",
         "--format", "cli-table",
         "--keys", "source",
         "--format-option", "no-head",
+        "sloc", f"{repo.working_dir}/src",
     ]
     print("Scanning", repo.working_dir, " ".join(args))
 
     by_extension = defaultdict(int)
     res = subprocess.run(
         args,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
+        capture_output=True,
         shell=True,
         cwd=repo.working_dir)
 
