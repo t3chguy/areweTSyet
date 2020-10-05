@@ -45,7 +45,8 @@ def scan(repo):
         shell=True,
         cwd=repo.working_dir)
 
-    print("DEBUG:", res.stdout.decode("utf-8"))
+    print("DEBUG:")
+    print(res.stdout.decode("utf-8"))
 
     for line in res.stdout.splitlines():
         l = line.decode("utf-8")[2:-2]
