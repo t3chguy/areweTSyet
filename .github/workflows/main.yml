@@ -20,15 +20,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
-      - uses: actions/setup-python@v2
-        with:
-          python-version: '3.8'
-          architecture: 'x64'
 
       # Install Python libraries
       - name: Install gitpython
-        run: python -m pip install gitpython
+        run: python3 -m pip install gitpython
 
       # Install SLOC
       - name: Install SLOC
@@ -36,7 +31,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: python script.py
+        run: python3 script.py
         
       # Commit back to the repo
       - uses: stefanzweifel/git-auto-commit-action@v4

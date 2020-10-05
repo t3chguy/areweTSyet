@@ -41,12 +41,13 @@ def scan(repo):
         "--keys", "source",
         "--format-option", "no-head",
     ]
-    print("Scanning", repo.working_dir, "".join(args))
+    print("Scanning", repo.working_dir, " ".join(args))
 
     by_extension = defaultdict(int)
     res = subprocess.run(
         args,
-        capture_output=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
         shell=True,
         cwd=repo.working_dir)
 
