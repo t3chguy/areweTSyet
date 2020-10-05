@@ -36,10 +36,11 @@ def get_repo(repo_name):
 
 def scan(repo):
     args = [
+        "sloc",
         "--format", "cli-table",
         "--keys", "source",
         "--format-option", "no-head",
-        "sloc", f"{repo.working_dir}/src",
+        f"{repo.working_dir}/src",
     ]
     print("Scanning", repo.working_dir, " ".join(args))
 
