@@ -1,6 +1,5 @@
 import pathlib
 import re
-import sys
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -45,25 +44,19 @@ def scan(repo):
     print("Scanning", repo.working_dir)
 
     by_extension = defaultdict(int)
-    try:
-        res = subprocess.run(
-            args,
-            capture_output=True,
-            shell=True,
-            cwd=repo.working_dir)
+    res = subprocess.run(
+        args,
+        capture_output=True,
+        shell=True,
+        cwd=repo.working_dir)
 
-        for line in res.stdout.splitlines():
-            l = line.decode("utf-8")[2:-2]
-            r = regex.match(l)
-            if not r:
-                continue
+    for line in res.stdout.splitlines():
+        l = line.decode("utf-8")[2:-2]
+        r = regex.match(l)
+        if not r:
+            continue
 
-            # print(l)
-            # print(r.groups())
-
-            by_extension[r.group(1)] += int(r.group(2))
-    except FileNotFoundError as not_found:
-        print("FileNotFoundError", repo.working_dir, not_found.filename, not_found.filename2)
+        by_extension[r.group(1)] += int(r.group(2))
 
     return by_extension
 
