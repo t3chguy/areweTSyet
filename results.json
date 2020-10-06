@@ -545,5 +545,46 @@
                 }
             ]
         ]
+    ],
+    [
+        "2020-10-06",
+        [
+            [
+                "vector-im/element-desktop",
+                "2170e494fbefd59de232e2d5e7d3d651476988b2",
+                {
+                    "js": 1298
+                }
+            ],
+            [
+                "vector-im/element-web",
+                "9700ff90833aa00e8aff8b61cbf007b66c0e3546",
+                {
+                    "ts": 803,
+                    "tsx": 828,
+                    "html": 1013,
+                    "js": 208,
+                    "scss": 67
+                }
+            ],
+            [
+                "matrix-org/matrix-react-sdk",
+                "1e34365caab3ac2024cbc02e4967e2411085c134",
+                {
+                    "ts": 12782,
+                    "js": 51506,
+                    "tsx": 19921,
+                    "html": 5
+                }
+            ],
+            [
+                "matrix-org/matrix-js-sdk",
+                "1845d1ac5512f77c93cefc4e8cc4ee4683cda696",
+                {
+                    "js": 23181,
+                    "ts": 738
+                }
+            ]
+        ]
     ]
 ]
