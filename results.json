@@ -586,5 +586,87 @@
                 }
             ]
         ]
+    ],
+    [
+        "2020-10-07",
+        [
+            [
+                "vector-im/element-desktop",
+                "2170e494fbefd59de232e2d5e7d3d651476988b2",
+                {
+                    "js": 1298
+                }
+            ],
+            [
+                "vector-im/element-web",
+                "9700ff90833aa00e8aff8b61cbf007b66c0e3546",
+                {
+                    "ts": 803,
+                    "tsx": 828,
+                    "html": 1013,
+                    "js": 208,
+                    "scss": 67
+                }
+            ],
+            [
+                "matrix-org/matrix-react-sdk",
+                "430bceb91d2d79a4fac67b8e3a9650999ad2dc88",
+                {
+                    "ts": 12782,
+                    "js": 51530,
+                    "tsx": 19924,
+                    "html": 5
+                }
+            ],
+            [
+                "matrix-org/matrix-js-sdk",
+                "03fc12e88893b630025f74d2e1f9d558878ed5fb",
+                {
+                    "js": 23186,
+                    "ts": 738
+                }
+            ]
+        ]
+    ],
+    [
+        "2020-10-08",
+        [
+            [
+                "vector-im/element-desktop",
+                "9bb386f2b5d97f6d342f2b8b209f15e5b4960910",
+                {
+                    "js": 1298
+                }
+            ],
+            [
+                "vector-im/element-web",
+                "54f92bd483c9e855d1f317a9393dd18ae95dbefd",
+                {
+                    "ts": 803,
+                    "tsx": 828,
+                    "html": 1013,
+                    "js": 208,
+                    "scss": 67
+                }
+            ],
+            [
+                "matrix-org/matrix-react-sdk",
+                "5a4ca4578a68376ca24866ebb5e6636747359819",
+                {
+                    "ts": 13378,
+                    "js": 50549,
+                    "tsx": 19870,
+                    "html": 5
+                }
+            ],
+            [
+                "matrix-org/matrix-js-sdk",
+                "c6b2e9873ce78b68ca1fc57632b8ea9e8070c7a2",
+                {
+                    "js": 22302,
+                    "ts": 1621
+                }
+            ]
+        ]
     ]
 ]
