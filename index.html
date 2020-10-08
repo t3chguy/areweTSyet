@@ -108,28 +108,35 @@
         };
 
         fetch("results.json").then(response => response.json()).then(data => {
-            const extSet = new Set();
+            // const extSet = new Set();
+            // for (const [date, repos] of data) {
+            //     for (const [repoName, sha, extLoc] of repos) {
+            //         for (const ext in extLoc) {
+            //             // group TSX into TS
+            //             if (ext === "tsx") {
+            //                 extLoc["ts"] = (extLoc["ts"] || 0) + extLoc[ext];
+            //                 delete extLoc[ext];
+            //                 continue;
+            //             }
+            //
+            //             extSet.add(ext);
+            //         }
+            //     }
+            // }
+
+            // group tsx with ts
             for (const [date, repos] of data) {
                 for (const [repoName, sha, extLoc] of repos) {
                     for (const ext in extLoc) {
                         // group TSX into TS
                         if (ext === "tsx") {
                             extLoc["ts"] = (extLoc["ts"] || 0) + extLoc[ext];
-                            delete extLoc[ext];
-                            continue;
                         }
-
-                        extSet.add(ext);
                     }
                 }
             }
 
-            // remove ignored extensions
-            extSet.delete("html");
-            extSet.delete("scss");
-            extSet.delete("svg");
-
-            const extensions = [...extSet];
+            const extensions = ["ts", "js"];
 
             // Generate the data points from the raw data.
             let labels = [];
