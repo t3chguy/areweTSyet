@@ -9,6 +9,7 @@ import subprocess
 from git import Repo
 
 REPO_NAMES = [
+    "vector-im/element-builder",
     "vector-im/element-desktop",
     "vector-im/element-web",
     "matrix-org/matrix-react-sdk",
