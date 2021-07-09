@@ -40,7 +40,7 @@ def scan(repo):
 
     by_extension = defaultdict(int)
     res = subprocess.run(
-        f"sloc --format cli-table --keys source --format-option no-head {repo.working_dir}/src",
+        f"sloc --format cli-table --exclude modernizr.js --keys source --format-option no-head {repo.working_dir}/src",
         stdout=subprocess.PIPE,
         # stderr=subprocess.STDOUT,
         shell=True,
