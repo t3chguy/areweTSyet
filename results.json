@@ -18525,5 +18525,35 @@
                 {}
             ]
         ]
+    ],
+    [
+        "2021-11-21",
+        [
+            [
+                "vector-im/element-builder",
+                "d4c488a468706fc6b54243af9fb1d5d33bc5f041",
+                {}
+            ],
+            [
+                "vector-im/element-desktop",
+                "ffd6cf5ad78d19ec27708e448da23221118150e1",
+                {}
+            ],
+            [
+                "vector-im/element-web",
+                "b2e8f212e4101c0543a5bac7e88586e2cc0628b2",
+                {}
+            ],
+            [
+                "matrix-org/matrix-react-sdk",
+                "7f6f9844386523b19efeb7b69a664210fc8a956b",
+                {}
+            ],
+            [
+                "matrix-org/matrix-js-sdk",
+                "b2d83c1f80b53ae3ca396ac102edf27bfbbd7015",
+                {}
+            ]
+        ]
     ]
 ]
