@@ -160,12 +160,18 @@
                 // Finish up the config.
                 let config = Object.assign({}, configTemplate);
                 config.data = {
-                    labels: labels.filter((_, i) => Object.values(datumErrorsByRepo).some(c => c[i] !== undefined)),
+                    labels: [
+                        labels[0],
+                        ...labels.filter((_, i) => Object.values(datumErrorsByRepo).some(c => c[i] !== undefined)),
+                    ],
                     datasets: Object.keys(datumErrorsByRepo).map((repo, i) => ({
                         label: repo,
                         borderColor: colors[i][0],
                         backgroundColor: colors[i][1],
-                        data: datumErrorsByRepo[repo].filter(c => c !== undefined),
+                        data: [
+                            undefined,
+                            ...datumErrorsByRepo[repo].filter(c => c !== undefined),
+                        ],
                     })),
                 };
                 config.options.title.text = "Typescript strict mode errors";
