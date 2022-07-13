@@ -45,11 +45,12 @@
     </div>
 
     <div>
-        <canvas id="chart"></canvas>
+        You can drag to zoom to a portion of the graphs.
     </div>
 
     <div>
-        You can drag to zoom to a portion of the graph above.
+        <canvas id="chart1"></canvas>
+        <canvas id="chart2"></canvas>
     </div>
 
     <div>
@@ -60,13 +61,12 @@
     </div>
 
     <script>
-        var configTemplate = {
+        const configTemplate = {
             type: 'line',
             options: {
                 responsive: true,
                 title: {
                     display: true,
-                    text: 'Are We TS Yet?'
                 },
                 tooltips: {
                     mode: 'index',
@@ -108,22 +108,6 @@
         };
 
         fetch("results.json").then(response => response.json()).then(data => {
-            // const extSet = new Set();
-            // for (const [date, repos] of data) {
-            //     for (const [repoName, sha, extLoc] of repos) {
-            //         for (const ext in extLoc) {
-            //             // group TSX into TS
-            //             if (ext === "tsx") {
-            //                 extLoc["ts"] = (extLoc["ts"] || 0) + extLoc[ext];
-            //                 delete extLoc[ext];
-            //                 continue;
-            //             }
-            //
-            //             extSet.add(ext);
-            //         }
-            //     }
-            // }
-
             // group tsx with ts
             for (const [date, repos] of data) {
                 for (const [repoName, sha, extLoc] of repos) {
@@ -136,93 +120,151 @@
                 }
             }
 
-            const extensions = ["ts", "js"];
+            const extSet = new Set();
+            for (const [date, repos] of data) {
+                for (const [repoName, sha, extLoc] of repos) {
+                    for (const ext in extLoc) {
+                        if (ext.startsWith("_")) continue;
+
+                        // group TSX into TS
+                        if (ext === "tsx") {
+                            extLoc["ts"] = (extLoc["ts"] || 0) + extLoc[ext];
+                            delete extLoc[ext];
+                            continue;
+                        }
+
+                        extSet.add(ext);
+                    }
+                }
+            }
+
+            const extensions = Array.from(extSet);
+
+            const colors = [
+                ["rgb(150, 20, 40)", "rgb(150, 20, 40)"],
+                ["rgb(255, 99, 132)", "rgb(255, 99, 132)"],
+                ["rgb(75, 192, 192)", "rgb(75, 192, 192)"],
+                ["rgb(54, 162, 235)", "rgb(54, 162, 235)"],
+                ["rgb(235, 217, 54)", "rgb(235, 217, 54)"],
+                ["rgb(46, 132, 16)", "rgb(46, 132, 16)"],
+                ["rgb(235, 151, 54)", "rgb(235, 151, 54)"],
+                ["rgb(220, 0, 255)", "rgb(220, 0, 255)"],
+            ];
 
             // Generate the data points from the raw data.
             let labels = [];
-            const langs = {};
+            const datumSlocByExtension = {};
+            const datumErrorsByRepo = {};
+            let firstErrorsByRepoIndex = -1;
 
             for (const ext of extensions) {
-                langs[ext] = [];
+                datumSlocByExtension[ext] = [];
             }
 
             let i = 0;
             for (const [date, repos] of data) {
                 labels.push(date);
-                for (const [repoName, sha, extLoc] of repos) {
+                for (const [repoName, sha, {_error_count: errCount, ...extLoc}] of repos) {
                     for (const ext of extensions) {
-                        if (!langs[ext][i]) langs[ext][i] = 0;
-                        langs[ext][i] += extLoc[ext] || 0;
+                        if (!datumSlocByExtension[ext][i]) datumSlocByExtension[ext][i] = 0;
+                        datumSlocByExtension[ext][i] += extLoc[ext] || 0;
+                    }
+
+                    if (errCount !== undefined) {
+                        if (firstErrorsByRepoIndex < 0) firstErrorsByRepoIndex = i;
+                        if (!datumErrorsByRepo[repoName]) datumErrorsByRepo[repoName] = [];
+                        datumErrorsByRepo[repoName][i] = errCount;
                     }
                 }
                 i++;
             }
+            
+            {
+                // Finish up the config.
+                let config = Object.assign({}, configTemplate);
+                config.data = {
+                    labels: labels.slice(firstErrorsByRepoIndex),
+                    datasets: Object.keys(datumErrorsByRepo).map((repo, i) => ({
+                        label: repo,
+                        borderColor: colors[i][0],
+                        backgroundColor: colors[i][1],
+                        data: datumErrorsByRepo[repo].slice(firstErrorsByRepoIndex),
+                    })),
+                };
+                config.options.title.text = "Typescript strict mode errors";
+                console.log("@@", config.data);
 
-            const colors = [
-                ["rgb(255, 99, 132)", "rgb(255, 99, 132)"],
-                ["rgb(75, 192, 192)", "rgb(75, 192, 192)"],
-                ["rgb(54, 162, 235)", "rgb(54, 162, 235)"],
-                ["rgb(235, 217, 54)", "rgb(235, 217, 54)"],
-            ];
-
-            // Finish up the config.
-            let config = Object.assign({}, configTemplate);
-            config.data = {
-                labels: labels,
-                datasets: Object.keys(langs).map((ext, i) => ({
-                    label: ext,
-                    borderColor: colors[i][0],
-                    backgroundColor: colors[i][1],
-                    data: langs[ext],
-                })),
-            };
-            console.log("@@", config.data);
-
-            // Render the graph.
-            let ctx = document.getElementById("chart").getContext('2d');
-
-            window["chart"] = new Chart(ctx, config);
-
-            // Also fill in the snapshot table.
-            let [date, repos] = data[data.length - 1];
-            document.getElementById("snapshot-when").innerText = date;
-
-            /////////////////////////////////////
-
-            let snapshot_table = document.getElementById("snapshot");
-
-            // populate header
-            const row = document.createElement("tr");
-            for (const label of ["Repo", ...extensions]) {
-                const cell = document.createElement("th");
-                cell.innerText = label;
-                row.appendChild(cell);
+                // Render the graph.
+                let ctx = document.getElementById("chart1").getContext('2d');
+                window["chart1"] = new Chart(ctx, config);
             }
-            snapshot_table.appendChild(row);
 
-            // Finally, actually fill in the table.
-            for (const [repoName, sha, extLoc] of repos) {
+            {
+                // Finish up the config.
+                let config = Object.assign({}, configTemplate);
+                config.data = {
+                    labels: labels,
+                    datasets: Object.keys(datumSlocByExtension).map((ext, i) => ({
+                        label: ext,
+                        borderColor: colors[i][0],
+                        backgroundColor: colors[i][1],
+                        data: datumSlocByExtension[ext],
+                    })),
+                };
+                config.options.title.text = "File type breakdown";
+                console.log("@@", config.data);
+
+                // Render the graph.
+                let ctx = document.getElementById("chart2").getContext('2d');
+                window["chart2"] = new Chart(ctx, config);
+            }
+
+            {
+                // Also fill in the snapshot table.
+                let [date, repos] = data[data.length - 1];
+                document.getElementById("snapshot-when").innerText = date;
+
+                /////////////////////////////////////
+
+                let snapshot_table = document.getElementById("snapshot");
+
+                // populate header
                 const row = document.createElement("tr");
-                const cell = document.createElement("th");
-                cell.className = "left";
-
-                const anchor = document.createElement("a");
-                anchor.href = `https://github.com/${repoName}/commit/${sha}`;
-                anchor.innerText = repoName;
-                cell.appendChild(anchor);
-                row.appendChild(cell);
-
-                for (const count of extensions.map(ext => extLoc[ext] || 0)) {
-                    const cell = document.createElement("td");
-                    cell.innerText = count;
+                for (const label of ["Repo", "Errors", ...extensions]) {
+                    const cell = document.createElement("th");
+                    cell.innerText = label;
                     row.appendChild(cell);
                 }
                 snapshot_table.appendChild(row);
+
+                // Finally, actually fill in the table.
+                for (const [repoName, sha, {_error_count: errCount, ...extLoc}] of repos) {
+                    const row = document.createElement("tr");
+                    const cell = document.createElement("th");
+                    cell.className = "left";
+
+                    const anchor = document.createElement("a");
+                    anchor.href = `https://github.com/${repoName}/commit/${sha}`;
+                    anchor.innerText = repoName;
+                    cell.appendChild(anchor);
+                    row.appendChild(cell);
+
+                    const cell2 = document.createElement("td");
+                    cell2.innerText = errCount || "";
+                    row.appendChild(cell2);
+                    for (const count of extensions.map(ext => extLoc[ext] || 0)) {
+                        const cell = document.createElement("td");
+                        cell.innerText = count;
+                        row.appendChild(cell);
+                    }
+                    snapshot_table.appendChild(row);
+                }
             }
         });
 
         function resetZoom() {
-            window["chart"].resetZoom();
+            window["chart1"].resetZoom();
+            window["chart2"].resetZoom();
         }
     </script>
 </body>

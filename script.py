@@ -56,7 +56,16 @@ def scan(repo):
 
         by_extension[r.group(1)] += int(r.group(2))
 
-    return by_extension
+    res = subprocess.run(
+        'tsc --strict --pretty false | grep "error" | wc -l',
+        stdout=subprocess.PIPE,
+        # stderr=subprocess.STDOUT,
+        shell=True,
+        cwd=repo.working_dir)
+
+    print(res.stdout.decode("utf-8"))
+
+    return by_extension, int(res.stdout.strip().decode("utf-8"))
 
 
 REPOS = list(map(get_repo, REPO_NAMES))
@@ -64,11 +73,11 @@ REPOS = list(map(get_repo, REPO_NAMES))
 results = []
 for i, repo in enumerate(REPOS):
     commit = repo.head.commit
-    result = scan(repo)
+    by_extension, error_count = scan(repo)
 
-    print(commit, result)
+    print(commit, error_count, by_extension)
 
-    results.append(dict(result))
+    results.append(dict(by_extension, _error_count=error_count))
 
 with open("results.json", "r+") as f:
     try:
