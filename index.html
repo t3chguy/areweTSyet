@@ -90,7 +90,6 @@
                         stacked: true,
                         scaleLabel: {
                             display: true,
-                            labelString: 'SLOC'
                         }
                     }]
                 },
@@ -192,6 +191,7 @@
                     })),
                 };
                 config.options.title.text = "Typescript strict mode errors";
+                config.options.scales.yAxes[0].scaleLabel = "Number of errors";
                 console.log("@@", config.data);
 
                 // Render the graph.
@@ -212,6 +212,7 @@
                     })),
                 };
                 config.options.title.text = "File type breakdown";
+                config.options.scales.yAxes[0].scaleLabel = "SLOC";
                 console.log("@@", config.data);
 
                 // Render the graph.
