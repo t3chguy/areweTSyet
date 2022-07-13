@@ -97,4 +97,4 @@ existing_data.append((
 sorted(existing_data, key=lambda x: x[0])
 
 with open("results.json", "w") as f:
-    f.write(json.dumps(existing_data, indent=4))
+    json.dump(existing_data, f, indent=4)

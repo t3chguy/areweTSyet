@@ -20,9 +20,11 @@ jobs:
       - name: Install SLOC
         run: sudo npm install sloc -g
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
+      - name: Generate results.json
         run: python3 script.py
+
+      - name: Prune results.json
+        run: python3 prune.py
         
       # Commit back to the repo
       - uses: stefanzweifel/git-auto-commit-action@v4
