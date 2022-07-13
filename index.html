@@ -134,7 +134,6 @@
             let labels = [];
             const datumSlocByExtension = {};
             const datumErrorsByRepo = {};
-            let firstErrorsByRepoIndex = -1;
 
             for (const ext of extensions) {
                 datumSlocByExtension[ext] = [];
@@ -150,7 +149,6 @@
                     }
 
                     if (errCount !== undefined) {
-                        if (firstErrorsByRepoIndex < 0) firstErrorsByRepoIndex = i;
                         if (!datumErrorsByRepo[repoName]) datumErrorsByRepo[repoName] = [];
                         datumErrorsByRepo[repoName][i] = errCount;
                     }
@@ -162,12 +160,12 @@
                 // Finish up the config.
                 let config = Object.assign({}, configTemplate);
                 config.data = {
-                    labels: labels.slice(firstErrorsByRepoIndex),
+                    labels: labels.filter((_, i) => Object.values(datumErrorsByRepo).some(c => c[i] !== undefined)),
                     datasets: Object.keys(datumErrorsByRepo).map((repo, i) => ({
                         label: repo,
                         borderColor: colors[i][0],
                         backgroundColor: colors[i][1],
-                        data: datumErrorsByRepo[repo].slice(firstErrorsByRepoIndex),
+                        data: datumErrorsByRepo[repo].filter(c => c !== undefined),
                     })),
                 };
                 config.options.title.text = "Typescript strict mode errors";
