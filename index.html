@@ -51,6 +51,7 @@
     <div>
         <canvas id="chart1"></canvas>
         <canvas id="chart2"></canvas>
+        <canvas id="chart3"></canvas>
     </div>
 
     <div>
@@ -108,16 +109,20 @@
 
         fetch("results.json").then(response => response.json()).then(data => {
             const extSet = new Set();
+            const testUtilSet = new Set();
             for (const [date, repos] of data) {
-                for (const [repoName, sha, extLoc] of repos) {
+                for (const [repoName, sha, extLoc, errCount, testUtils] of repos) {
                     for (const ext in extLoc) {
                         if (ext.startsWith("_")) continue;
                         extSet.add(ext);
                     }
+                    if (testUtils !== undefined) {
+                        for (const util in testUtils) {
+                            testUtilSet.add(util);
+                        }
+                    }
                 }
             }
-
-            const extensions = Array.from(extSet);
 
             const colors = [
                 ["rgb(150, 20, 40)", "rgb(150, 20, 40)"],
@@ -133,19 +138,30 @@
             // Generate the data points from the raw data.
             let labels = [];
             const datumSlocByExtension = {};
+            const datumTestUtilByRepo = {};
             const datumErrorsByRepo = {};
 
-            for (const ext of extensions) {
+            for (const ext of extSet) {
                 datumSlocByExtension[ext] = [];
+            }
+            for (const util of testUtilSet) {
+                datumTestUtilByRepo[util] = [];
             }
 
             let i = 0;
             for (const [date, repos] of data) {
                 labels.push(date);
-                for (const [repoName, sha, extLoc, errCount] of repos) {
-                    for (const ext of extensions) {
+                for (const [repoName, sha, extLoc, errCount, testUtils] of repos) {
+                    for (const ext of extSet) {
                         if (!datumSlocByExtension[ext][i]) datumSlocByExtension[ext][i] = 0;
                         datumSlocByExtension[ext][i] += extLoc[ext] || 0;
+                    }
+
+                    if (testUtils !== undefined) {
+                        for (const util of testUtilSet) {
+                            if (!datumTestUtilByRepo[util][i]) datumTestUtilByRepo[util][i] = 0;
+                            datumTestUtilByRepo[util][i] += testUtils[util] || 0;
+                        }
                     }
 
                     if (errCount !== undefined) {
@@ -188,6 +204,27 @@
                 let config = Object.assign({}, configTemplate);
                 config.data = {
                     labels: labels,
+                    datasets: Object.keys(datumTestUtilByRepo).map((ext, i) => ({
+                        label: ext,
+                        borderColor: colors[i][0],
+                        backgroundColor: colors[i][1],
+                        data: datumTestUtilByRepo[ext],
+                    })),
+                };
+                config.options.title.text = "Test utility breakdown";
+                config.options.scales.yAxes[0].scaleLabel = "Imports";
+                console.log("@@", config.data);
+
+                // Render the graph.
+                let ctx = document.getElementById("chart2").getContext('2d');
+                window["chart2"] = new Chart(ctx, config);
+            }
+
+            {
+                // Finish up the config.
+                let config = Object.assign({}, configTemplate);
+                config.data = {
+                    labels: labels,
                     datasets: Object.keys(datumSlocByExtension).map((ext, i) => ({
                         label: ext,
                         borderColor: colors[i][0],
@@ -200,8 +237,8 @@
                 console.log("@@", config.data);
 
                 // Render the graph.
-                let ctx = document.getElementById("chart2").getContext('2d');
-                window["chart2"] = new Chart(ctx, config);
+                let ctx = document.getElementById("chart3").getContext('2d');
+                window["chart3"] = new Chart(ctx, config);
             }
 
             {
@@ -215,7 +252,7 @@
 
                 // populate header
                 const row = document.createElement("tr");
-                for (const label of ["Repo", "Errors", ...extensions]) {
+                for (const label of ["Repo", "Errors", ...extSet, ...testUtilSet]) {
                     const cell = document.createElement("th");
                     cell.innerText = label;
                     row.appendChild(cell);
@@ -223,7 +260,7 @@
                 snapshot_table.appendChild(row);
 
                 // Finally, actually fill in the table.
-                for (const [repoName, sha, extLoc, errCount] of repos) {
+                for (const [repoName, sha, extLoc, errCount, testUtils] of repos) {
                     const row = document.createElement("tr");
                     const cell = document.createElement("th");
                     cell.className = "left";
@@ -237,7 +274,12 @@
                     const cell2 = document.createElement("td");
                     cell2.innerText = errCount || "";
                     row.appendChild(cell2);
-                    for (const count of extensions.map(ext => extLoc[ext] || 0)) {
+                    for (const count of Array.from(extSet).map(ext => extLoc[ext] || 0)) {
+                        const cell = document.createElement("td");
+                        cell.innerText = count;
+                        row.appendChild(cell);
+                    }
+                    for (const count of Array.from(testUtilSet).map(util => testUtils[util] || 0)) {
                         const cell = document.createElement("td");
                         cell.innerText = count;
                         row.appendChild(cell);

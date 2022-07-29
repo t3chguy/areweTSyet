@@ -1,3 +1,4 @@
+import os
 import pathlib
 import re
 from collections import defaultdict
@@ -35,14 +36,11 @@ def get_repo(repo_name):
     return Repo(path)
 
 
-def scan(repo):
-    print("Scanning", repo.working_dir)
-
+def scan_extensions(repo):
     by_extension = defaultdict(int)
     res = subprocess.run(
         f"sloc --format cli-table --exclude modernizr.js --keys source --format-option no-head {repo.working_dir}/src",
         stdout=subprocess.PIPE,
-        # stderr=subprocess.STDOUT,
         shell=True,
         cwd=repo.working_dir)
 
@@ -56,16 +54,40 @@ def scan(repo):
 
         by_extension[r.group(1)] += int(r.group(2))
 
+    return dict(by_extension)
+
+
+def scan_ts_strict_errors(repo):
     res = subprocess.run(
         'tsc --strict --pretty false | grep "error" | wc -l',
         stdout=subprocess.PIPE,
-        # stderr=subprocess.STDOUT,
         shell=True,
         cwd=repo.working_dir)
 
     print(res.stdout.decode("utf-8"))
 
-    return by_extension, int(res.stdout.strip().decode("utf-8"))
+    return int(res.stdout.strip().decode("utf-8"))
+
+
+def grep_count(path, query):
+    res = subprocess.run(
+        f'grep --exclude-dir=node_modules -rE "{query}" | wc -l',
+        stdout=subprocess.PIPE,
+        shell=True,
+        cwd=path)
+
+    print(res.stdout.decode("utf-8"))
+
+    return int(res.stdout.strip().decode("utf-8"))
+
+
+def scan_test_libraries(repo):
+    return dict(
+        enzyme=grep_count(repo.working_dir, "import .+ from .enzyme.;"),
+        rtl=grep_count(repo.working_dir, "import .+ from .@testing-library/react.;"),
+        react_dom=grep_count(repo.working_dir, "import .+ from .react-dom.;"),
+        matrix_react_test_utils=grep_count(repo.working_dir, "import .+ from .matrix-react-test-utils.;"),
+    )
 
 
 REPOS = list(map(get_repo, REPO_NAMES))
@@ -73,11 +95,15 @@ REPOS = list(map(get_repo, REPO_NAMES))
 results = []
 for i, repo in enumerate(REPOS):
     commit = repo.head.commit
-    by_extension, error_count = scan(repo)
+
+    print("Scanning", repo.working_dir)
+    by_extension = scan_extensions(repo)
+    error_count = scan_ts_strict_errors(repo)
+    test_libraries = scan_test_libraries(repo)
 
     print(commit, error_count, by_extension)
 
-    results.append((dict(by_extension), error_count))
+    results.append((dict(by_extension), error_count, test_libraries))
 
 with open("results.json", "r+") as f:
     try:
