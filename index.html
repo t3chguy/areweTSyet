@@ -203,12 +203,18 @@
                 // Finish up the config.
                 let config = Object.assign({}, configTemplate);
                 config.data = {
-                    labels: labels,
-                    datasets: Object.keys(datumTestUtilByRepo).map((ext, i) => ({
-                        label: ext,
+                    labels: [
+                        labels[0],
+                        ...labels.filter((_, i) => Object.values(datumTestUtilByRepo).some(c => c[i] !== undefined)),
+                    ],
+                    datasets: Object.keys(datumTestUtilByRepo).map((util, i) => ({
+                        label: util,
                         borderColor: colors[i][0],
                         backgroundColor: colors[i][1],
-                        data: datumTestUtilByRepo[ext],
+                        data: [
+                            undefined,
+                            ...datumTestUtilByRepo[util].filter(c => c !== undefined),
+                        ],
                     })),
                 };
                 config.options.title.text = "Test utility breakdown";

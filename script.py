@@ -1,4 +1,3 @@
-import os
 import pathlib
 import re
 from collections import defaultdict
@@ -18,6 +17,7 @@ REPO_NAMES = [
 ]
 
 day = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+# day = datetime(year=2022, month=4, day=6, hour=1, minute=1, second=0, microsecond=0)
 
 BASE_PATH = Path("./repos")
 
@@ -111,16 +111,16 @@ with open("results.json", "r+") as f:
     except:
         existing_data = []
 
-existing_data.append((
-    str(day.date()),
-    [(
-        REPO_NAMES[i],
-        REPOS[i].head.commit.hexsha,
-        *x,
-    ) for i, x in enumerate(results)],
-))
+date = str(day.date())
+data = [(
+    REPO_NAMES[i],
+    REPOS[i].head.commit.hexsha,
+    *x,
+) for i, x in enumerate(results)]
 
-sorted(existing_data, key=lambda x: x[0])
+existing_data = [x for x in existing_data if x[0] != date]
+existing_data.append((date, data))
+existing_data = sorted(existing_data, key=lambda x: x[0])
 
 with open("results.json", "w") as f:
     json.dump(existing_data, f, indent=4)
