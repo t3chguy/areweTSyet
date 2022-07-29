@@ -9077,5 +9077,57 @@
                 }
             ]
         ]
+    ],
+    [
+        "2022-07-29",
+        [
+            [
+                "vector-im/element-builder",
+                "9dfada4c6f726afaae762191217506d4ffb0246a",
+                {
+                    "ts": 1322,
+                    "_error_count": 94
+                }
+            ],
+            [
+                "vector-im/element-desktop",
+                "b693aee5cb23c54f7fcf0dcb01a113bc3df63305",
+                {
+                    "ts": 1845,
+                    "_error_count": 218
+                }
+            ],
+            [
+                "vector-im/element-web",
+                "0f88d86c890e69e4ebf448f1fd6ae871bbb37b95",
+                {
+                    "ts": 1310,
+                    "tsx": 808,
+                    "html": 1164,
+                    "_error_count": 183
+                }
+            ],
+            [
+                "matrix-org/matrix-react-sdk",
+                "bd30b75f7962c02387898fa448940397f8b5c697",
+                {
+                    "ts": 34659,
+                    "tsx": 86013,
+                    "html": 5,
+                    "css": 105,
+                    "js": 22,
+                    "_error_count": 20920
+                }
+            ],
+            [
+                "matrix-org/matrix-js-sdk",
+                "3824f65d156ab3f9c8c5fa4215ab054c50bfb006",
+                {
+                    "ts": 32973,
+                    "js": 70,
+                    "_error_count": 5964
+                }
+            ]
+        ]
     ]
 ]
