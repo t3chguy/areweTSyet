@@ -142,7 +142,7 @@
             let i = 0;
             for (const [date, repos] of data) {
                 labels.push(date);
-                for (const [repoName, sha, {_error_count: errCount, ...extLoc}] of repos) {
+                for (const [repoName, sha, extLoc, errCount] of repos) {
                     for (const ext of extensions) {
                         if (!datumSlocByExtension[ext][i]) datumSlocByExtension[ext][i] = 0;
                         datumSlocByExtension[ext][i] += extLoc[ext] || 0;
@@ -223,7 +223,7 @@
                 snapshot_table.appendChild(row);
 
                 // Finally, actually fill in the table.
-                for (const [repoName, sha, {_error_count: errCount, ...extLoc}] of repos) {
+                for (const [repoName, sha, extLoc, errCount] of repos) {
                     const row = document.createElement("tr");
                     const cell = document.createElement("th");
                     cell.className = "left";

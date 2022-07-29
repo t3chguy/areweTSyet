@@ -77,7 +77,7 @@ for i, repo in enumerate(REPOS):
 
     print(commit, error_count, by_extension)
 
-    results.append(dict(by_extension, _error_count=error_count))
+    results.append((dict(by_extension), error_count))
 
 with open("results.json", "r+") as f:
     try:
@@ -90,7 +90,7 @@ existing_data.append((
     [(
         REPO_NAMES[i],
         REPOS[i].head.commit.hexsha,
-        x,
+        *x,
     ) for i, x in enumerate(results)],
 ))
 
