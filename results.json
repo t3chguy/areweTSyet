@@ -7170,58 +7170,6 @@
         ]
     ],
     [
-        "2022-07-25",
-        [
-            [
-                "vector-im/element-builder",
-                "9dfada4c6f726afaae762191217506d4ffb0246a",
-                {
-                    "ts": 1322
-                },
-                94
-            ],
-            [
-                "vector-im/element-desktop",
-                "1a40ead8af4f6cd63fca841b9bb0fb017c7de2fc",
-                {
-                    "ts": 1848
-                },
-                220
-            ],
-            [
-                "vector-im/element-web",
-                "b3b8e2e0a20f073362bb1dd26d8d0b126de14097",
-                {
-                    "ts": 1310,
-                    "tsx": 800,
-                    "html": 1164
-                },
-                183
-            ],
-            [
-                "matrix-org/matrix-react-sdk",
-                "787ace9dc5edfaafaca8b723e40c591a44dfb8e0",
-                {
-                    "ts": 34480,
-                    "tsx": 85907,
-                    "html": 5,
-                    "css": 105,
-                    "js": 22
-                },
-                20742
-            ],
-            [
-                "matrix-org/matrix-js-sdk",
-                "5367ee18fbd2e87cc2fe4f71e4b678a7c620ab80",
-                {
-                    "ts": 32972,
-                    "js": 70
-                },
-                5361
-            ]
-        ]
-    ],
-    [
         "2022-07-26",
         [
             [
@@ -11269,6 +11217,88 @@
             [
                 "matrix-org/matrix-js-sdk",
                 "fb565f301b96fc962dd4b4ba7c234f1e87a61eeb",
+                {
+                    "ts": 33622,
+                    "js": 70
+                },
+                6818,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ]
+        ]
+    ],
+    [
+        "2022-09-14",
+        [
+            [
+                "vector-im/element-builder",
+                "59e634203a90ec4dcbc44581ecec8d01fb8b532d",
+                {
+                    "ts": 1396
+                },
+                102,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-desktop",
+                "f3138ecceb514b4ac2bd780fb2afd92a418ed1c0",
+                {
+                    "ts": 1845
+                },
+                2,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-web",
+                "60157fffe2d9458a4c9ff942d0fb23666258d882",
+                {
+                    "ts": 1274,
+                    "tsx": 808,
+                    "html": 1164
+                },
+                183,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 3,
+                    "matrix_react_test_utils": 1
+                }
+            ],
+            [
+                "matrix-org/matrix-react-sdk",
+                "236ca2e494db1664ea3e213b937b5fd87dd6e363",
+                {
+                    "ts": 36125,
+                    "tsx": 87857,
+                    "html": 5,
+                    "css": 105,
+                    "js": 22
+                },
+                21749,
+                {
+                    "enzyme": 74,
+                    "rtl": 35,
+                    "react_dom": 19,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "matrix-org/matrix-js-sdk",
+                "59c82cb67972257cded956d25291961c21bd27ba",
                 {
                     "ts": 33622,
                     "js": 70
