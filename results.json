@@ -7170,58 +7170,6 @@
         ]
     ],
     [
-        "2022-07-28",
-        [
-            [
-                "vector-im/element-builder",
-                "9dfada4c6f726afaae762191217506d4ffb0246a",
-                {
-                    "ts": 1322
-                },
-                94
-            ],
-            [
-                "vector-im/element-desktop",
-                "d2e43e77fd634fa82b83d8f9d5533c1f72a31cb7",
-                {
-                    "ts": 1848
-                },
-                220
-            ],
-            [
-                "vector-im/element-web",
-                "a620ff2b6a24737e30b7a82da1be6933ce16ae79",
-                {
-                    "ts": 1310,
-                    "tsx": 800,
-                    "html": 1164
-                },
-                183
-            ],
-            [
-                "matrix-org/matrix-react-sdk",
-                "8379f5624e511a22c31a6b08dacc76cd79570aaa",
-                {
-                    "ts": 34655,
-                    "tsx": 85993,
-                    "html": 5,
-                    "css": 105,
-                    "js": 22
-                },
-                20914
-            ],
-            [
-                "matrix-org/matrix-js-sdk",
-                "3c17e4a6d6b10cb64ae1ad152cb3031158afefc4",
-                {
-                    "ts": 32972,
-                    "js": 70
-                },
-                5962
-            ]
-        ]
-    ],
-    [
         "2022-07-29",
         [
             [
@@ -11364,6 +11312,88 @@
                     "js": 70
                 },
                 6818,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ]
+        ]
+    ],
+    [
+        "2022-09-17",
+        [
+            [
+                "vector-im/element-builder",
+                "3b2f7a25abe67913589d303e008443466690b3a7",
+                {
+                    "ts": 1396
+                },
+                102,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-desktop",
+                "e2e1b5f8fdc8c56c17324d7da2cdecca90add75b",
+                {
+                    "ts": 1845
+                },
+                2,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-web",
+                "fed77108e6ca449b8a75217a4a50e4a34dded853",
+                {
+                    "ts": 1274,
+                    "tsx": 808,
+                    "html": 1164
+                },
+                183,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 3,
+                    "matrix_react_test_utils": 1
+                }
+            ],
+            [
+                "matrix-org/matrix-react-sdk",
+                "cb735c9439a9cd381b25b46d2cee01445b6b6dfb",
+                {
+                    "ts": 36414,
+                    "tsx": 88236,
+                    "html": 5,
+                    "css": 105,
+                    "js": 22
+                },
+                22035,
+                {
+                    "enzyme": 75,
+                    "rtl": 39,
+                    "react_dom": 19,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "matrix-org/matrix-js-sdk",
+                "9ff11d1f325fe53f81e9609a44ca07509fe2a5da",
+                {
+                    "ts": 33622,
+                    "js": 70
+                },
+                6980,
                 {
                     "enzyme": 0,
                     "rtl": 0,
