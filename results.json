@@ -11842,5 +11842,87 @@
                 }
             ]
         ]
+    ],
+    [
+        "2022-10-18",
+        [
+            [
+                "vector-im/element-builder",
+                "353c597dfda63f27ec982309324d396251b3a984",
+                {
+                    "ts": 1442
+                },
+                84,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-desktop",
+                "d0e1596bf2939f40f11e84eb7d82dd55ff196f5d",
+                {
+                    "ts": 1846
+                },
+                2,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-web",
+                "5d9eee8e4b95747a4cf25634a8fc42f4a1404128",
+                {
+                    "ts": 1259,
+                    "tsx": 807,
+                    "html": 1164
+                },
+                539,
+                {
+                    "enzyme": 0,
+                    "rtl": 5,
+                    "react_dom": 2,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "matrix-org/matrix-react-sdk",
+                "57eec824d98db0b7cfbba07c6e7d4deb6756811d",
+                {
+                    "ts": 37875,
+                    "tsx": 90279,
+                    "html": 5,
+                    "css": 105,
+                    "js": 22
+                },
+                24068,
+                {
+                    "enzyme": 68,
+                    "rtl": 72,
+                    "react_dom": 20,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "matrix-org/matrix-js-sdk",
+                "30570bcce6376c81da87992b6e75c24a2e004eda",
+                {
+                    "ts": 34037,
+                    "js": 65
+                },
+                7490,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ]
+        ]
     ]
 ]
