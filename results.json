@@ -9630,87 +9630,6 @@
         ]
     ],
     [
-        "2022-12-13",
-        [
-            [
-                "vector-im/element-builder",
-                "76102b207fdcd9e6e29a89b947afea0ee3b7d07c",
-                {
-                    "ts": 1498
-                },
-                86,
-                {
-                    "enzyme": 0,
-                    "rtl": 0,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "vector-im/element-desktop",
-                "6508e171dbe5bb3e5b7cc4dc06607b298d7dc87c",
-                {
-                    "ts": 1854
-                },
-                2,
-                {
-                    "enzyme": 0,
-                    "rtl": 0,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "vector-im/element-web",
-                "60d05f03a556661b6f96502dc5ae5fbd653a05e3",
-                {
-                    "ts": 1265,
-                    "tsx": 828,
-                    "html": 1792
-                },
-                540,
-                {
-                    "enzyme": 0,
-                    "rtl": 5,
-                    "react_dom": 2,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "matrix-org/matrix-react-sdk",
-                "47cc8d6edf776308bf5ce35165ffcb95373ef35d",
-                {
-                    "ts": 40093,
-                    "tsx": 94621,
-                    "html": 5,
-                    "css": 104,
-                    "js": 22
-                },
-                26199,
-                {
-                    "enzyme": 50,
-                    "rtl": 126,
-                    "react_dom": 18,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "matrix-org/matrix-js-sdk",
-                "9c17eb6c14ecc3dae0bbb3f183cbd77e029679aa",
-                {
-                    "ts": 36884
-                },
-                7671,
-                {
-                    "enzyme": 0,
-                    "rtl": 0,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ]
-        ]
-    ],
-    [
         "2022-12-14",
         [
             [
@@ -13751,6 +13670,87 @@
                     "ts": 38169
                 },
                 8480,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ]
+        ]
+    ],
+    [
+        "2023-02-02",
+        [
+            [
+                "vector-im/element-builder",
+                "ee5693d4387552f4c215c4294f88aec353b9bee8",
+                {
+                    "ts": 1498
+                },
+                86,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-desktop",
+                "47165ca73d522107a57081dace74592ad784e61d",
+                {
+                    "ts": 1871
+                },
+                2,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-web",
+                "e047e5d803c452f5d8a3e1eeb27fe635f21a147f",
+                {
+                    "ts": 1269,
+                    "tsx": 828,
+                    "html": 1792
+                },
+                541,
+                {
+                    "enzyme": 0,
+                    "rtl": 5,
+                    "react_dom": 2,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "matrix-org/matrix-react-sdk",
+                "923ad4323b2006b2b180544429455ffe7d4a6cc3",
+                {
+                    "ts": 40965,
+                    "tsx": 95861,
+                    "html": 5,
+                    "css": 104,
+                    "js": 22
+                },
+                28467,
+                {
+                    "enzyme": 36,
+                    "rtl": 166,
+                    "react_dom": 17,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "matrix-org/matrix-js-sdk",
+                "4e8affafcc9198b5377d6b5fb87d692e095979c3",
+                {
+                    "ts": 38217
+                },
+                8533,
                 {
                     "enzyme": 0,
                     "rtl": 0,
