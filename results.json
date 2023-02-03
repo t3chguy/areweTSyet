@@ -13759,5 +13759,86 @@
                 }
             ]
         ]
+    ],
+    [
+        "2023-02-03",
+        [
+            [
+                "vector-im/element-builder",
+                "ee5693d4387552f4c215c4294f88aec353b9bee8",
+                {
+                    "ts": 1498
+                },
+                86,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-desktop",
+                "47165ca73d522107a57081dace74592ad784e61d",
+                {
+                    "ts": 1871
+                },
+                2,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-web",
+                "e047e5d803c452f5d8a3e1eeb27fe635f21a147f",
+                {
+                    "ts": 1269,
+                    "tsx": 828,
+                    "html": 1792
+                },
+                541,
+                {
+                    "enzyme": 0,
+                    "rtl": 5,
+                    "react_dom": 2,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "matrix-org/matrix-react-sdk",
+                "ebb8408f28af410e1f3244aee6dd4f7c8ef4becc",
+                {
+                    "ts": 40972,
+                    "tsx": 95753,
+                    "html": 5,
+                    "css": 104,
+                    "js": 22
+                },
+                28454,
+                {
+                    "enzyme": 36,
+                    "rtl": 168,
+                    "react_dom": 17,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "matrix-org/matrix-js-sdk",
+                "8f5db463e78f536424149cd396efed7f5d9d9090",
+                {
+                    "ts": 38221
+                },
+                8533,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ]
+        ]
     ]
 ]
