@@ -9,7 +9,6 @@ import subprocess
 from git import Repo
 
 REPO_NAMES = [
-    "vector-im/element-builder",
     "vector-im/element-desktop",
     "vector-im/element-web",
     "matrix-org/matrix-react-sdk",
@@ -32,6 +31,7 @@ def get_repo(repo_name):
         pass
     else:
         Repo.clone_from(f"https://github.com/{repo_name}", path)
+        subprocess.run("yarn", cwd=path)
 
     return Repo(path)
 
@@ -59,7 +59,7 @@ def scan_extensions(repo):
 
 def scan_ts_strict_errors(repo):
     res = subprocess.run(
-        'tsc --strict --pretty false | grep "error" | wc -l',
+        'yarn tsc --strict --noEmit --pretty false | grep "error" | wc -l',
         stdout=subprocess.PIPE,
         shell=True,
         cwd=repo.working_dir)
