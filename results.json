@@ -14038,7 +14038,7 @@
                 {
                     "enzyme": 18,
                     "rtl": 201,
-                    "react_dom": 1,
+                    "react_dom": 12,
                     "matrix_react_test_utils": 0
                 }
             ],
