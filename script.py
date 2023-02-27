@@ -71,7 +71,7 @@ def scan_ts_strict_errors(repo):
 
 def grep_count(path, query):
     res = subprocess.run(
-        f'grep --exclude-dir=node_modules -rE "{query}" | wc -l',
+        f'grep --exclude-dir=node_modules --exclude-dir=src -rE "{query}" | wc -l',
         stdout=subprocess.PIPE,
         shell=True,
         cwd=path)
