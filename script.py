@@ -85,7 +85,7 @@ def scan_test_libraries(repo):
     return dict(
         enzyme=grep_count(repo.working_dir, "import .+ from .enzyme.;"),
         rtl=grep_count(repo.working_dir, "import .+ from .@testing-library/react.;"),
-        react_dom=grep_count(repo.working_dir, "import .+ from .react-dom.;"),
+        react_dom=grep_count(repo.working_dir, "import .+ from .react-dom.;") + grep_count(repo.working_dir, "import .+ from .react-dom/test-utils.;"),
         matrix_react_test_utils=grep_count(repo.working_dir, "import .+ from .matrix-react-test-utils.;"),
     )
 
