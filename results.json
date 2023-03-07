@@ -14046,7 +14046,7 @@
         [
             [
                 "vector-im/element-desktop",
-                "126d2c336ba51fa00a42aad5c667e19c581c36ee",
+                "25af58e86f49985497f3f55cf0d928e2f93450a5",
                 {
                     "ts": 1871
                 },
@@ -14060,7 +14060,7 @@
             ],
             [
                 "vector-im/element-web",
-                "3c4d25d6c2cf6dde69300815000559561a816c50",
+                "5ae88eb30b0c8207c3103ea2fb972ce0cce042b7",
                 {
                     "ts": 1289,
                     "tsx": 828,
@@ -14076,15 +14076,15 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "307df9d2c3865da4ec3ab5f8413b531388ce8a36",
+                "2c97cb40548e3b3c65f7059df9e674d36624d7ea",
                 {
-                    "ts": 41516,
-                    "tsx": 96647,
+                    "ts": 41520,
+                    "tsx": 96680,
                     "html": 5,
                     "css": 104,
                     "js": 22
                 },
-                3363,
+                3110,
                 {
                     "enzyme": 0,
                     "rtl": 216,
@@ -14094,7 +14094,7 @@
             ],
             [
                 "matrix-org/matrix-js-sdk",
-                "b4cdc5a92397c92c551b91c695c16b2c9ca74727",
+                "44244386582a550856c57425ea8678e48876a478",
                 {
                     "ts": 38787
                 },
