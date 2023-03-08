@@ -14032,7 +14032,7 @@
         [
             [
                 "vector-im/element-desktop",
-                "22fe702b83062b8848efc4a471ca502ffc651212",
+                "104d985c24c2c03f168b5847af0308faf3f89834",
                 {
                     "ts": 1871
                 },
@@ -14080,7 +14080,7 @@
             ],
             [
                 "matrix-org/matrix-js-sdk",
-                "bcf3bba44e61280a9743bf0a6394a8caded7548f",
+                "a976080d1bd809f0cb289585a56200754afecec3",
                 {
                     "ts": 38806
                 },
