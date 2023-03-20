@@ -14137,15 +14137,15 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "bc60e59eda904fd35a0b7c3f5b6a041114e45034",
+                "503df54bd64306345b4c0f930cb8b568cd0f11f1",
                 {
                     "ts": 42001,
-                    "tsx": 96727,
+                    "tsx": 96743,
                     "html": 5,
                     "css": 104,
                     "js": 22
                 },
-                2023,
+                2019,
                 {
                     "enzyme": 0,
                     "rtl": 220,
