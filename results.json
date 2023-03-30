@@ -14210,7 +14210,7 @@
         [
             [
                 "vector-im/element-desktop",
-                "40058d36c42546b15b0ad59d8dd3b33a43fcf8d2",
+                "a9cffb8ce563f49edc74fb9dca01bd4a0b671ee0",
                 {
                     "ts": 1947
                 },
@@ -14224,7 +14224,7 @@
             ],
             [
                 "vector-im/element-web",
-                "b9b52c8c06525bb0956a08be0fe642056b71889e",
+                "60d5ab427a138e425ff43a2e70a2a384ac24e653",
                 {
                     "ts": 1296,
                     "tsx": 857,
