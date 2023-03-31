@@ -14196,7 +14196,7 @@
         [
             [
                 "vector-im/element-desktop",
-                "718d5a803770d6695d651523a61917640907e674",
+                "439760f8ee2201956a29740a3a38e4a180dbc371",
                 {
                     "ts": 1947
                 },
@@ -14226,15 +14226,15 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "567248d5c5b2a792df5f693d0ec01769f9a643e7",
+                "dddef858f1bb26072a24e942df5ad40175bad90d",
                 {
-                    "ts": 42460,
-                    "tsx": 97079,
+                    "ts": 42472,
+                    "tsx": 97130,
                     "html": 5,
                     "css": 104,
                     "js": 22
                 },
-                1642,
+                1640,
                 {
                     "enzyme": 0,
                     "rtl": 223,
