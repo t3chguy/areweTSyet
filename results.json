@@ -14210,13 +14210,13 @@
             ],
             [
                 "vector-im/element-web",
-                "1a63a7ff2eb40e3b3161da4b8fdefbfaab817b2b",
+                "89054a50acb2251eed9ff24cb8053cd3b1d434d6",
                 {
                     "ts": 1296,
-                    "tsx": 857,
+                    "tsx": 855,
                     "html": 1792
                 },
-                1990,
+                1989,
                 {
                     "enzyme": 0,
                     "rtl": 5,
