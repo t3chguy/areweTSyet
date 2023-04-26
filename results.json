@@ -14528,13 +14528,13 @@
             ],
             [
                 "vector-im/element-web",
-                "e558661a7784a30740f47df476d995a1c239eb5d",
+                "3eddc939ceef93f4ba72911c93f6c897ad0206bf",
                 {
                     "ts": 1322,
                     "tsx": 859,
                     "html": 1792
                 },
-                1007,
+                1008,
                 {
                     "enzyme": 0,
                     "rtl": 5,
@@ -14544,10 +14544,10 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "6166dbb661b6749b949376a099ee355a52f8083f",
+                "5328f6e5fe4d5645ecd39e43c846f0076736ac88",
                 {
                     "ts": 42788,
-                    "tsx": 97716,
+                    "tsx": 97730,
                     "html": 5,
                     "css": 104,
                     "js": 22
@@ -14555,16 +14555,16 @@
                 1056,
                 {
                     "enzyme": 0,
-                    "rtl": 230,
+                    "rtl": 231,
                     "react_dom": 0,
                     "matrix_react_test_utils": 0
                 }
             ],
             [
                 "matrix-org/matrix-js-sdk",
-                "73dbd709d801b9a3327e2902997fbb967496e86a",
+                "cfffa9c518b7446153f5e0f549a866796e71b4a4",
                 {
-                    "ts": 40458
+                    "ts": 40463
                 },
                 0,
                 {
