@@ -14528,7 +14528,7 @@
             ],
             [
                 "vector-im/element-web",
-                "f5452fb09709d763118375e60d327f710d6188a3",
+                "6e8f76e93c6d92156a0d7e5c9c675b946148df02",
                 {
                     "ts": 1322,
                     "tsx": 859,
@@ -14544,10 +14544,10 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "d084c34ea2dc940d950750b667b76a457324cdd9",
+                "457c1d011abc8028a5ddb0e47fcbe9ee29418080",
                 {
-                    "ts": 42935,
-                    "tsx": 97820,
+                    "ts": 42936,
+                    "tsx": 97827,
                     "html": 5,
                     "css": 104,
                     "js": 22
@@ -14562,7 +14562,7 @@
             ],
             [
                 "matrix-org/matrix-js-sdk",
-                "54bb4c8011e84ea79c8511b9080494c36f7a5eda",
+                "47ba8cfa24c7fee63efe6dc2d0faa3fea1288ff7",
                 {
                     "ts": 40547
                 },
