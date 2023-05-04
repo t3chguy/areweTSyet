@@ -14613,8 +14613,8 @@
                 "matrix-org/matrix-react-sdk",
                 "692d73dfe8679aef047dcfe579bfb08e1133862a",
                 {
-                    "ts": 42946,
                     "tsx": 97876,
+                    "ts": 42946,
                     "html": 5,
                     "css": 104,
                     "js": 22
