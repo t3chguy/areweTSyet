@@ -14648,7 +14648,7 @@
         [
             [
                 "vector-im/element-desktop",
-                "f178fc129cf069550b6ae6d8d134f2d6cd215196",
+                "02f353223a47ae96abd3b31259beb38e9e63d909",
                 {
                     "ts": 1974
                 },
@@ -14662,13 +14662,13 @@
             ],
             [
                 "vector-im/element-web",
-                "b25a7ef505386b3fcf7f173565b445e1eadcc84a",
+                "1e7d001cd33ee404a8b1b5c6899ee385895e2694",
                 {
                     "ts": 1323,
                     "tsx": 859,
                     "html": 1796
                 },
-                1001,
+                523,
                 {
                     "enzyme": 0,
                     "rtl": 5,
