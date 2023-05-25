@@ -11562,73 +11562,6 @@
         ]
     ],
     [
-        "2023-04-04",
-        [
-            [
-                "vector-im/element-desktop",
-                "224bccaf95730998f035aaab9c3e5f13d5fec530",
-                {
-                    "ts": 1947
-                },
-                0,
-                {
-                    "enzyme": 0,
-                    "rtl": 0,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "vector-im/element-web",
-                "472518fcc9e727f7f131ad172eb1224c32c3f2ef",
-                {
-                    "ts": 1296,
-                    "tsx": 855,
-                    "html": 1792
-                },
-                1989,
-                {
-                    "enzyme": 0,
-                    "rtl": 5,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "matrix-org/matrix-react-sdk",
-                "1024ced52e392bbbd4bc8833ec55a93b2525274e",
-                {
-                    "ts": 42535,
-                    "tsx": 97272,
-                    "html": 5,
-                    "css": 104,
-                    "js": 22
-                },
-                1567,
-                {
-                    "enzyme": 0,
-                    "rtl": 226,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "matrix-org/matrix-js-sdk",
-                "d05313f95ef5fdc9a242b09f98e53ddef24e77d1",
-                {
-                    "ts": 39747
-                },
-                0,
-                {
-                    "enzyme": 0,
-                    "rtl": 0,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ]
-        ]
-    ],
-    [
         "2023-04-05",
         [
             [
@@ -14913,6 +14846,73 @@
     ],
     [
         "2023-05-24",
+        [
+            [
+                "vector-im/element-desktop",
+                "dde3bb3cafb74c8738d6c2d190e9e933e707b102",
+                {
+                    "ts": 1974
+                },
+                0,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-web",
+                "0a5173f258022d5b9ec5a4c288c71769b8d54624",
+                {
+                    "ts": 1327,
+                    "tsx": 859,
+                    "html": 1796
+                },
+                523,
+                {
+                    "enzyme": 0,
+                    "rtl": 5,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "matrix-org/matrix-react-sdk",
+                "269a3481772d98aec83016b67a975f323828e31e",
+                {
+                    "ts": 43364,
+                    "tsx": 98412,
+                    "html": 5,
+                    "css": 104,
+                    "js": 22
+                },
+                363,
+                {
+                    "enzyme": 0,
+                    "rtl": 245,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "matrix-org/matrix-js-sdk",
+                "a2d1dee0a1ae15180f092acc4cf0a816e5a5cf29",
+                {
+                    "ts": 40915
+                },
+                0,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ]
+        ]
+    ],
+    [
+        "2023-05-25",
         [
             [
                 "vector-im/element-desktop",
