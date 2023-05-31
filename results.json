@@ -14997,7 +14997,7 @@
             ],
             [
                 "vector-im/element-web",
-                "4296005408c094b4697b835d55771dfe5cfd3474",
+                "8c97de47a3adbae071fcf549657dfeee385df60b",
                 {
                     "ts": 1327,
                     "tsx": 859,
@@ -15031,7 +15031,7 @@
             ],
             [
                 "matrix-org/matrix-js-sdk",
-                "56c5375bbddeb8555d7b6e51b3f2a9374fcfc902",
+                "648a1a09b192534bcde9e0a23c1f3c30541fc2e6",
                 {
                     "ts": 40922
                 },
