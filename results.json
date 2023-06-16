@@ -15219,8 +15219,8 @@
                     "ts": 43613,
                     "tsx": 97856,
                     "html": 5,
-                    "js": 22,
-                    "css": 104
+                    "css": 104,
+                    "js": 22
                 },
                 366,
                 {
@@ -15232,7 +15232,7 @@
             ],
             [
                 "matrix-org/matrix-js-sdk",
-                "f938d10f7b2dfb9bf18f32d9364374ca80adeab2",
+                "afc70528ccd1db534e6e6aa5090ea1ec8d06f36c",
                 {
                     "ts": 41584
                 },
