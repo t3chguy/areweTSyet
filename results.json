@@ -11964,73 +11964,6 @@
         ]
     ],
     [
-        "2023-05-04",
-        [
-            [
-                "vector-im/element-desktop",
-                "b5f1c3089d3fa295dcc776add4b9837c5e7772e3",
-                {
-                    "ts": 1974
-                },
-                0,
-                {
-                    "enzyme": 0,
-                    "rtl": 0,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "vector-im/element-web",
-                "c0e070934a00715f38fb7fb736cbb57306862ebe",
-                {
-                    "ts": 1322,
-                    "tsx": 859,
-                    "html": 1792
-                },
-                1008,
-                {
-                    "enzyme": 0,
-                    "rtl": 5,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "matrix-org/matrix-react-sdk",
-                "3ca957b541bf451227b25482b0b29b9d42280407",
-                {
-                    "ts": 42946,
-                    "tsx": 97881,
-                    "html": 5,
-                    "css": 104,
-                    "js": 22
-                },
-                771,
-                {
-                    "enzyme": 0,
-                    "rtl": 235,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "matrix-org/matrix-js-sdk",
-                "8ff8685ae5a930a43e204dc7e1aa9b8da338ade3",
-                {
-                    "ts": 40547
-                },
-                0,
-                {
-                    "enzyme": 0,
-                    "rtl": 0,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ]
-        ]
-    ],
-    [
         "2023-05-05",
         [
             [
@@ -15352,6 +15285,73 @@
                 {
                     "ts": 44146,
                     "tsx": 97605,
+                    "html": 5,
+                    "css": 104,
+                    "js": 22
+                },
+                305,
+                {
+                    "enzyme": 0,
+                    "rtl": 259,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "matrix-org/matrix-js-sdk",
+                "f884c78579c336a03bc20ff8f4e92c46582822b6",
+                {
+                    "ts": 41763
+                },
+                0,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ]
+        ]
+    ],
+    [
+        "2023-06-24",
+        [
+            [
+                "vector-im/element-desktop",
+                "35f52a5ab0cac3c861cdc32395643782e1cb6f59",
+                {
+                    "ts": 1975
+                },
+                0,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-web",
+                "33eb055f2428b09bbde3f95e35aeded45cc7ba67",
+                {
+                    "ts": 1327,
+                    "tsx": 860,
+                    "html": 1796
+                },
+                326,
+                {
+                    "enzyme": 0,
+                    "rtl": 5,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "matrix-org/matrix-react-sdk",
+                "ab982689012bec6b916c9e3d9094665d6df87693",
+                {
+                    "tsx": 97605,
+                    "ts": 44146,
                     "html": 5,
                     "css": 104,
                     "js": 22
