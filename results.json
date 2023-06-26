@@ -15318,7 +15318,7 @@
         [
             [
                 "vector-im/element-desktop",
-                "35f52a5ab0cac3c861cdc32395643782e1cb6f59",
+                "e5da6259477edaf33b61b72f6d79b0f2564ba4e5",
                 {
                     "ts": 1975
                 },
@@ -15332,7 +15332,7 @@
             ],
             [
                 "vector-im/element-web",
-                "1e67eb2ca61fb794fdaba178bbbf0b7a40cbb042",
+                "bdbae36f5e751113e259fb657fd15e328925c14e",
                 {
                     "ts": 1327,
                     "tsx": 860,
@@ -15366,9 +15366,9 @@
             ],
             [
                 "matrix-org/matrix-js-sdk",
-                "96e484a3feba476d6d248630dbf7e748f5d0aeb0",
+                "326a13bcfe96e18ce6dad29275c8216d7d4c69dc",
                 {
-                    "ts": 41984
+                    "ts": 41995
                 },
                 0,
                 {
