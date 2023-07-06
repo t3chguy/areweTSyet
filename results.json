@@ -15533,15 +15533,15 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "b467d0700f13fc53dad9cdb8b910124c983b35ff",
+                "902263d7c92a82073db3cf66f4cba6685c5b320b",
                 {
-                    "ts": 44303,
-                    "tsx": 98235,
+                    "ts": 44304,
+                    "tsx": 98260,
                     "html": 5,
                     "css": 104,
                     "js": 22
                 },
-                67,
+                64,
                 {
                     "enzyme": 0,
                     "rtl": 261,
@@ -15551,13 +15551,13 @@
             ],
             [
                 "vector-im/element-web",
-                "01a234aafaa4ed5e9ecac57c2ae430f8128dc31a",
+                "658e2829293ece69bbd1d7a0d5bf29c3802364b5",
                 {
                     "ts": 1351,
                     "tsx": 862,
                     "html": 1796
                 },
-                66,
+                63,
                 {
                     "enzyme": 0,
                     "rtl": 5,
