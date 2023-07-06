@@ -15518,31 +15518,15 @@
         "2023-07-06",
         [
             [
-                "vector-im/element-desktop",
-                "229d0a9f784f2cf33860ef8b73ff16f4a8ebc9b1",
+                "matrix-org/matrix-js-sdk",
+                "8e3f2f326221f0c0214ab52404716de18aa5e6f7",
                 {
-                    "ts": 1975
+                    "ts": 42355
                 },
                 0,
                 {
                     "enzyme": 0,
                     "rtl": 0,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "vector-im/element-web",
-                "01a234aafaa4ed5e9ecac57c2ae430f8128dc31a",
-                {
-                    "ts": 1351,
-                    "tsx": 862,
-                    "html": 1796
-                },
-                124,
-                {
-                    "enzyme": 0,
-                    "rtl": 5,
                     "react_dom": 0,
                     "matrix_react_test_utils": 0
                 }
@@ -15566,10 +15550,26 @@
                 }
             ],
             [
-                "matrix-org/matrix-js-sdk",
-                "8e3f2f326221f0c0214ab52404716de18aa5e6f7",
+                "vector-im/element-web",
+                "01a234aafaa4ed5e9ecac57c2ae430f8128dc31a",
                 {
-                    "ts": 42355
+                    "ts": 1351,
+                    "tsx": 862,
+                    "html": 1796
+                },
+                66,
+                {
+                    "enzyme": 0,
+                    "rtl": 5,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-desktop",
+                "229d0a9f784f2cf33860ef8b73ff16f4a8ebc9b1",
+                {
+                    "ts": 1975
                 },
                 0,
                 {
