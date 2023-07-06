@@ -30,14 +30,15 @@ regex = re.compile(r"(\w+).+?(\d+)")
 
 def get_repo(repo_name):
     path = BASE_PATH / repo_name
-    repo = Repo(path)
 
     try:
         pathlib.Path(path).mkdir(parents=True, exist_ok=False)
     except FileExistsError:
+        repo = Repo(path)
         repo.remotes.origin.pull()
     else:
         Repo.clone_from(f"https://github.com/{repo_name}", path)
+        repo = Repo(path)
         subprocess.run("yarn", cwd=path)
         subprocess.run(["yarn", "link"], cwd=path)
 
