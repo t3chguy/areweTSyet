@@ -9,11 +9,16 @@ import subprocess
 from git import Repo
 
 REPO_NAMES = [
-    "vector-im/element-desktop",
-    "vector-im/element-web",
-    "matrix-org/matrix-react-sdk",
     "matrix-org/matrix-js-sdk",
+    "matrix-org/matrix-react-sdk",
+    "vector-im/element-web",
+    "vector-im/element-desktop",
 ]
+
+YARN_LINK = {
+    "matrix-org/matrix-react-sdk": ["matrix-js-sdk"],
+    "vector-im/element-web": ["matrix-react-sdk", "matrix-js-sdk"],
+}
 
 day = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
 # day = datetime(year=2022, month=4, day=6, hour=1, minute=1, second=0, microsecond=0)
@@ -25,15 +30,22 @@ regex = re.compile(r"(\w+).+?(\d+)")
 
 def get_repo(repo_name):
     path = BASE_PATH / repo_name
+    repo = Repo(path)
+
     try:
         pathlib.Path(path).mkdir(parents=True, exist_ok=False)
     except FileExistsError:
-        pass
+        repo.remotes.origin.pull()
     else:
         Repo.clone_from(f"https://github.com/{repo_name}", path)
         subprocess.run("yarn", cwd=path)
+        subprocess.run(["yarn", "link"], cwd=path)
 
-    return Repo(path)
+    links = YARN_LINK.get(repo_name, [])
+    for link in links:
+        subprocess.run(["yarn", "link", link], cwd=path)
+
+    return repo
 
 
 def scan_extensions(repo):
