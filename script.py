@@ -72,7 +72,7 @@ def scan_extensions(repo):
 
 def scan_ts_strict_errors(repo):
     res = subprocess.run(
-        'yarn tsc --strict --noEmit --pretty false | grep "error" | wc -l',
+        'yarn tsc --strict --alwaysStrict --noImplicitAny --noImplicitThis --strictBindCallApply --strictFunctionTypes --strictNullChecks --strictPropertyInitialization --useUnknownInCatchVariables --noEmit --pretty false | grep "error" | wc -l',
         stdout=subprocess.PIPE,
         shell=True,
         cwd=repo.working_dir)
