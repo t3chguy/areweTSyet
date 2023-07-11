@@ -15618,10 +15618,10 @@
             ],
             [
                 "vector-im/element-web",
-                "311c5fec664dbaf9836ee200a262df7193a66c3a",
+                "ef30662c0466debe43b8671163dfd0cce2f8f0b9",
                 {
-                    "ts": 1358,
-                    "tsx": 866,
+                    "ts": 1376,
+                    "tsx": 867,
                     "html": 1796
                 },
                 0,
