@@ -15854,7 +15854,7 @@
         [
             [
                 "matrix-org/matrix-js-sdk",
-                "906946c419de273596d89db314fb94fe846bb4fa",
+                "e6fa4cdb3c217d947acbf07f9d571a47e56aed36",
                 {
                     "ts": 42869
                 },
@@ -15868,7 +15868,7 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "1efeccb97e0d66405382aa5aefc8ee0abf7b06d1",
+                "9f0537527e87ef2c01944c27a87eaf5ac6c114fc",
                 {
                     "ts": 44951,
                     "tsx": 98299,
@@ -15886,7 +15886,7 @@
             ],
             [
                 "vector-im/element-web",
-                "6406ae1a888324a020f2d0e5de9418831f682984",
+                "a19c3f5da699bc2f586c5a95404f5681be49debf",
                 {
                     "ts": 1378,
                     "tsx": 875,
