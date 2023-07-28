@@ -15854,7 +15854,7 @@
         [
             [
                 "matrix-org/matrix-js-sdk",
-                "615f7f9e72fbe332b0bc3a0614f26d6a0f6e2c89",
+                "fd0c4a7f5697b33020362de72d19521c22efd63b",
                 {
                     "ts": 42949
                 },
@@ -15876,7 +15876,7 @@
                     "css": 104,
                     "js": 22
                 },
-                0,
+                4,
                 {
                     "enzyme": 0,
                     "rtl": 263,
