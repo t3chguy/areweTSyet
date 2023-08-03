@@ -15988,9 +15988,9 @@
         [
             [
                 "matrix-org/matrix-js-sdk",
-                "61c0a49971062d6da3b69ad3eec156d1120bd187",
+                "2ef7ae7661b9ac036f50819efd2ae2a72ae61b4d",
                 {
-                    "ts": 43008
+                    "ts": 43029
                 },
                 0,
                 {
