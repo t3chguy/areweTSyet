@@ -12634,73 +12634,6 @@
         ]
     ],
     [
-        "2023-06-20",
-        [
-            [
-                "vector-im/element-desktop",
-                "e171a6acbe8f04db1bb48b6f15d4d605ff57f552",
-                {
-                    "ts": 1975
-                },
-                0,
-                {
-                    "enzyme": 0,
-                    "rtl": 0,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "vector-im/element-web",
-                "278c494eb368a4d198e62f3cd9907e09f6cfc838",
-                {
-                    "ts": 1327,
-                    "tsx": 860,
-                    "html": 1796
-                },
-                326,
-                {
-                    "enzyme": 0,
-                    "rtl": 5,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "matrix-org/matrix-react-sdk",
-                "985bde70c5b442c5fbafaf70d107159398699d4c",
-                {
-                    "ts": 44005,
-                    "tsx": 97540,
-                    "html": 5,
-                    "css": 104,
-                    "js": 22
-                },
-                328,
-                {
-                    "enzyme": 0,
-                    "rtl": 257,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "matrix-org/matrix-js-sdk",
-                "8b9672ba43a24d34f24758c4c63f3437111dfcf8",
-                {
-                    "ts": 41665
-                },
-                0,
-                {
-                    "enzyme": 0,
-                    "rtl": 0,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ]
-        ]
-    ],
-    [
         "2023-06-21",
         [
             [
@@ -15985,6 +15918,73 @@
     ],
     [
         "2023-08-09",
+        [
+            [
+                "matrix-org/matrix-js-sdk",
+                "3a5d66057e4cbc9dddd35bfd334f6dfc1402f83a",
+                {
+                    "ts": 43177
+                },
+                0,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "matrix-org/matrix-react-sdk",
+                "a1328d8ef70c6dba620caeab56b3c0a6867f79b4",
+                {
+                    "ts": 44899,
+                    "tsx": 98404,
+                    "html": 5,
+                    "css": 104,
+                    "js": 22
+                },
+                0,
+                {
+                    "enzyme": 0,
+                    "rtl": 266,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-web",
+                "d1f7b0898acc670a0d7f611cfb072e9f57aa549d",
+                {
+                    "ts": 1374,
+                    "tsx": 875,
+                    "html": 1796
+                },
+                0,
+                {
+                    "enzyme": 0,
+                    "rtl": 5,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-desktop",
+                "a0f92941fc033528eca3a35ab6f23a2b6d4a8eec",
+                {
+                    "ts": 2091
+                },
+                0,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ]
+        ]
+    ],
+    [
+        "2023-08-10",
         [
             [
                 "matrix-org/matrix-js-sdk",
