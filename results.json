@@ -16270,10 +16270,10 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "e34920133eaf42c7b3ebbcb8070ef41f36190b20",
+                "09c5e06d12ac15511e8310a572a3295064394dee",
                 {
                     "ts": 44833,
-                    "tsx": 98500,
+                    "tsx": 98346,
                     "html": 5,
                     "css": 104,
                     "js": 22
@@ -16281,7 +16281,7 @@
                 0,
                 {
                     "enzyme": 0,
-                    "rtl": 273,
+                    "rtl": 275,
                     "react_dom": 0,
                     "matrix_react_test_utils": 0
                 }
