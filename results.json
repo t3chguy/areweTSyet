@@ -16404,9 +16404,9 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "6cc42b7e2e033c91de570339e9bb24fa1681c357",
+                "6aa86a858f68a29bbda9438dc4a41a3915345d3c",
                 {
-                    "ts": 44870,
+                    "ts": 44909,
                     "tsx": 98401,
                     "html": 5,
                     "css": 104,
