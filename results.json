@@ -16422,16 +16422,16 @@
             ],
             [
                 "vector-im/element-web",
-                "2ad80c8fcf6d8372991529dcb3d96f7f3257ea61",
+                "3fd6b62254e792d26a46659299a826fc67c716f5",
                 {
                     "ts": 1373,
-                    "tsx": 889,
+                    "tsx": 895,
                     "html": 1796
                 },
                 0,
                 {
                     "enzyme": 0,
-                    "rtl": 5,
+                    "rtl": 7,
                     "react_dom": 0,
                     "matrix_react_test_utils": 0
                 }
