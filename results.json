@@ -16390,7 +16390,7 @@
         [
             [
                 "matrix-org/matrix-js-sdk",
-                "2918d686aee05bdc702fd765da16c74fd58c2a7e",
+                "015e9a5be7885264bf6a51c0072f059c045d85f4",
                 {
                     "ts": 43401
                 },
@@ -16438,7 +16438,7 @@
             ],
             [
                 "vector-im/element-desktop",
-                "ac40e365e5fb9c79129cf3951a7b5637ab6c6b7d",
+                "37bf22b92c8ea4cb1298cd0f1469f9effdbf540d",
                 {
                     "ts": 2105
                 },
