@@ -16683,19 +16683,19 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "e22fa2efc1b510516ec9663d9d99e3564564bdb6",
+                "255f0f59f52164ebd02e1d66f0e11609c09fb385",
                 {},
                 0,
                 {
                     "enzyme": 0,
-                    "rtl": 280,
+                    "rtl": 281,
                     "react_dom": 0,
                     "matrix_react_test_utils": 0
                 }
             ],
             [
                 "vector-im/element-web",
-                "b9ea639f9dc1b6568490cbc2e53df9af7302b274",
+                "82cb30373c8230d8d6105dd063755d2a46ad6bcb",
                 {},
                 0,
                 {
