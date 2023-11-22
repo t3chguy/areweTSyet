@@ -16854,7 +16854,7 @@
         [
             [
                 "matrix-org/matrix-js-sdk",
-                "ff501834e6d2d613239d94dbe2a9b11aad21c808",
+                "af9993a710aea47d70444ce2a39a1067fce806b5",
                 {},
                 0,
                 {
@@ -16866,7 +16866,7 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "52e3e0de1ffcdd5270465afcef343825c193f936",
+                "eb5516b7b1b5a40cd99b321a85e883632db3c985",
                 {},
                 0,
                 {
