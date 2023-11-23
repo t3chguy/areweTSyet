@@ -16854,7 +16854,7 @@
         [
             [
                 "matrix-org/matrix-js-sdk",
-                "af9993a710aea47d70444ce2a39a1067fce806b5",
+                "429c05ba8543103eefb2e6cbb10980c23725593e",
                 {},
                 0,
                 {
@@ -16868,7 +16868,7 @@
                 "matrix-org/matrix-react-sdk",
                 "ee485ffcfda09dc60047b57ae0e348cd7b09f7ef",
                 {},
-                0,
+                3,
                 {
                     "enzyme": 0,
                     "rtl": 283,
