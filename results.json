@@ -16972,12 +16972,12 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "f07a8800d398a8a220b58b7b3a2e789639544c06",
+                "926907309a485d603d3e12a6b677346719c65db3",
                 {},
                 0,
                 {
                     "enzyme": 0,
-                    "rtl": 283,
+                    "rtl": 282,
                     "react_dom": 0,
                     "matrix_react_test_utils": 0
                 }
