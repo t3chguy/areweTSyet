@@ -17013,7 +17013,7 @@
         [
             [
                 "matrix-org/matrix-js-sdk",
-                "cd672ec4cf865be9b63159373864638cd2287cf7",
+                "13b8f0106272e2d2bb659c6ddbe3c7d03e15867a",
                 {},
                 0,
                 {
@@ -17025,7 +17025,7 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "ab9604056d83c6561b98a80c354c0953e3a94cc0",
+                "1ce569bfc288a392eadf5395c8295a292c13fa48",
                 {},
                 0,
                 {
