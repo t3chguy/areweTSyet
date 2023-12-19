@@ -17172,7 +17172,7 @@
         [
             [
                 "matrix-org/matrix-js-sdk",
-                "5e67a173c8abdde6862b2605bcebe23ece06e9ad",
+                "6d1d04782a94b9be8e1b1c470d1449f2a2a5d6ec",
                 {},
                 0,
                 {
@@ -17184,12 +17184,12 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "5f92dad2734aabbf055567698687ed4b3feaae9c",
+                "2212fbadd07ea1a7de82b3294e2baa1367a6c170",
                 {},
                 0,
                 {
                     "enzyme": 0,
-                    "rtl": 282,
+                    "rtl": 284,
                     "react_dom": 0,
                     "matrix_react_test_utils": 0
                 }
