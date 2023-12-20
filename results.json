@@ -17184,7 +17184,7 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "af31965866fcb80ab8effa2dc0c04941e0df3a0f",
+                "0a881e21231a10a112db3e29ae2fc7b4a5f7ef26",
                 {},
                 0,
                 {
@@ -17196,9 +17196,9 @@
             ],
             [
                 "vector-im/element-web",
-                "da904252896b026cfbbc7704ff2decd5e1e21db8",
+                "2555ffc0d47aec12f35b0361d29343b0ac5c5dbc",
                 {},
-                2,
+                0,
                 {
                     "enzyme": 0,
                     "rtl": 7,
