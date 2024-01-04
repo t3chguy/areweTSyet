@@ -17436,7 +17436,7 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "baaf8ad68bc287e928f3c368c3a7026cc1b80e5c",
+                "fd64eccd4a7a063d48c55b08891811bf62a0fd83",
                 {
                     "ingle": 108,
                     "mpty": 38,
@@ -17445,7 +17445,7 @@
                 0,
                 {
                     "enzyme": 0,
-                    "rtl": 284,
+                    "rtl": 285,
                     "react_dom": 0,
                     "matrix_react_test_utils": 0
                 }
