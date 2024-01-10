@@ -17492,7 +17492,7 @@
         [
             [
                 "matrix-org/matrix-js-sdk",
-                "a597a9d660da355b08e59f8c784c4609b101ac90",
+                "f381dfe9915ee8ed157596a52c77c87223f1e2ab",
                 {
                     "ingle": 56,
                     "mpty": 6,
@@ -17524,7 +17524,7 @@
             ],
             [
                 "vector-im/element-web",
-                "c02af77655eaceaddfa7f288e5b756a74fdad569",
+                "18fee2e6503084daf33970029e377b7cc9b5a082",
                 {
                     "ingle": 3
                 },
