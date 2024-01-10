@@ -17492,7 +17492,7 @@
         [
             [
                 "matrix-org/matrix-js-sdk",
-                "49624d5d7308e772ebee84322886a39d2e866869",
+                "8df30ed068997aa74f21aa5be3c8df30f7dd07c5",
                 {
                     "ingle": 56,
                     "mpty": 6,
@@ -17508,7 +17508,7 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "1333456fc82b3463c123edf2ca4ff36373dd6eb8",
+                "c2b5c1fe9651f6a59381314218b22f8e681f08cb",
                 {
                     "ingle": 108,
                     "mpty": 38,
