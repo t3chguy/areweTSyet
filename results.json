@@ -17573,7 +17573,7 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "88a57fbf399ce3c7fb9d9499b174d8d80338a4b1",
+                "1c72867f2fd9655d48b2d0ac22e1e1ff774e6998",
                 {
                     "ingle": 108,
                     "mpty": 38,
@@ -17582,14 +17582,14 @@
                 0,
                 {
                     "enzyme": 0,
-                    "rtl": 285,
+                    "rtl": 286,
                     "react_dom": 0,
                     "matrix_react_test_utils": 0
                 }
             ],
             [
                 "vector-im/element-web",
-                "7cd2f78e3ad432f6efc113a55fd87ea236b95e82",
+                "3f578ad80adcc3b6f5b0212cd1ad5a5f81c2ed68",
                 {
                     "ingle": 3
                 },
