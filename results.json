@@ -17557,7 +17557,7 @@
         [
             [
                 "matrix-org/matrix-js-sdk",
-                "8df30ed068997aa74f21aa5be3c8df30f7dd07c5",
+                "2ef3ebb466ece630eba88ef29565d71a88efca08",
                 {
                     "ingle": 56,
                     "mpty": 6,
@@ -17573,7 +17573,7 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "65d6bfe6e96f77eedbce0af603a25737a7c2ca51",
+                "88a57fbf399ce3c7fb9d9499b174d8d80338a4b1",
                 {
                     "ingle": 108,
                     "mpty": 38,
@@ -17589,7 +17589,7 @@
             ],
             [
                 "vector-im/element-web",
-                "9ea88438f965c634eb404f4e0910eb32bcf518f6",
+                "7cd2f78e3ad432f6efc113a55fd87ea236b95e82",
                 {
                     "ingle": 3
                 },
@@ -17603,7 +17603,7 @@
             ],
             [
                 "vector-im/element-desktop",
-                "d37e1af1032c7d16c07296407fe2db4c995d997e",
+                "ab7002e68736af057ac960892a3e1f3a79ea20bc",
                 {
                     "ingle": 2
                 },
