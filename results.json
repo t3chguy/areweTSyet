@@ -17912,7 +17912,7 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "95430cecbcac040e94ea3fd01fbeba987cdcd9fd",
+                "38f791b79db57a7b977bf3c4ce69559ea223ee53",
                 {
                     "ingle": 109,
                     "mpty": 38,
@@ -17928,7 +17928,7 @@
             ],
             [
                 "vector-im/element-web",
-                "8af9fe2e277dafc76943cb6799ca228ffb4269aa",
+                "e6543bbde642451f8cca0dfac874b59f27dfc8f7",
                 {
                     "ingle": 3
                 },
