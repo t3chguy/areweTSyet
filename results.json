@@ -19684,10 +19684,10 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "050f61752f28bf918554f603c3e71d35db468f20",
+                "2f3c84f1f419a90f6405b1f681dfa39a5c57408a",
                 {
                     "ts": 46634,
-                    "tsx": 98547,
+                    "tsx": 98528,
                     "css": 119,
                     "js": 22,
                     "html": 5
