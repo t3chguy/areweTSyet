@@ -19804,7 +19804,7 @@
         [
             [
                 "matrix-org/matrix-js-sdk",
-                "a25cdcecaa1335500c6ec87690bc473c7ae3688c",
+                "b78a1ad889c7a51f8c73ff4fe944f65f12dd52f0",
                 {
                     "ts": 47942
                 },
@@ -19826,7 +19826,7 @@
                     "js": 22,
                     "html": 5
                 },
-                7,
+                0,
                 {
                     "enzyme": 0,
                     "rtl": 297,
@@ -19842,7 +19842,7 @@
                     "tsx": 902,
                     "html": 1807
                 },
-                7,
+                0,
                 {
                     "enzyme": 0,
                     "rtl": 7,
