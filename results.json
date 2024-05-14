@@ -19836,9 +19836,9 @@
             ],
             [
                 "vector-im/element-web",
-                "482b81b0ed5fde4da825757b212355981b47248e",
+                "bcd5c838e81fb96fef1dabaac9eb330d1f761b28",
                 {
-                    "ts": 1371,
+                    "ts": 1488,
                     "tsx": 906,
                     "html": 1807
                 },
