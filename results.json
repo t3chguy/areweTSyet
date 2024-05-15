@@ -19804,7 +19804,7 @@
         [
             [
                 "matrix-org/matrix-js-sdk",
-                "d421e7f82904350e02e32be9dcea52ad8e6b98b0",
+                "73ce51065f04a0faecbe262bc2b21179fea30224",
                 {
                     "ts": 47942
                 },
@@ -19852,7 +19852,7 @@
             ],
             [
                 "vector-im/element-desktop",
-                "a83003e0bd5f67badc78aa91cbdf82de50e3bd04",
+                "ed76d290c7577a09697ec1638af9e9e467b09df0",
                 {
                     "ts": 2168
                 },
