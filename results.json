@@ -20340,7 +20340,7 @@
         [
             [
                 "matrix-org/matrix-js-sdk",
-                "4cb851c51a296bed4975c4f8d9188c6f2ff556e9",
+                "661ba76763c412d0d400a8b5ba80ab646e8dc492",
                 {
                     "ts": 48539
                 },
@@ -20372,9 +20372,9 @@
             ],
             [
                 "vector-im/element-web",
-                "e151d9ab53708b9bfec8e98ee0530cab419112a5",
+                "6c3817fa34f348e1a75cc385ef12041c95148740",
                 {
-                    "ts": 1487,
+                    "ts": 1486,
                     "tsx": 905,
                     "html": 1807
                 },
