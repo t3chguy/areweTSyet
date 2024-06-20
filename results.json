@@ -20372,7 +20372,7 @@
             ],
             [
                 "vector-im/element-web",
-                "f8b3be682a4e50508cd7452a51ad4128d378a319",
+                "9f9cd6ff08b81db68b9157c63e61c803911edf79",
                 {
                     "ts": 1486,
                     "tsx": 909,
@@ -20381,7 +20381,7 @@
                 0,
                 {
                     "enzyme": 0,
-                    "rtl": 7,
+                    "rtl": 6,
                     "react_dom": 0,
                     "matrix_react_test_utils": 0
                 }
