@@ -20608,7 +20608,7 @@
         [
             [
                 "matrix-org/matrix-js-sdk",
-                "b36682cb99fb3ca31dabc017c56ee32d6f50130a",
+                "03ed4f5dd7a138e001ac11ba2718bdbca7e55ebe",
                 {
                     "ts": 48758
                 },
@@ -20630,7 +20630,7 @@
                     "js": 22,
                     "html": 5
                 },
-                0,
+                632,
                 {
                     "enzyme": 0,
                     "rtl": 302,
@@ -20646,7 +20646,7 @@
                     "tsx": 909,
                     "html": 1807
                 },
-                0,
+                642,
                 {
                     "enzyme": 0,
                     "rtl": 6,
