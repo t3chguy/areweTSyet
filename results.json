@@ -20756,10 +20756,10 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "c57d8463b9d394a22cd39d2ada0501d457034ab8",
+                "4edf4e42cde989c565cdb0995d65b26484f5038b",
                 {
                     "ts": 46898,
-                    "tsx": 98748,
+                    "tsx": 98719,
                     "css": 123,
                     "js": 22,
                     "html": 5
@@ -20790,7 +20790,7 @@
             ],
             [
                 "vector-im/element-desktop",
-                "effe3239db311938601aef326afd4fc5d92957ae",
+                "472aca04a2d5351cd764a903726f3e11450bf50a",
                 {
                     "ts": 2194
                 },
