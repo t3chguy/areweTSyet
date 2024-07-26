@@ -17522,73 +17522,6 @@
         ]
     ],
     [
-        "2024-06-05",
-        [
-            [
-                "matrix-org/matrix-js-sdk",
-                "87c2ac3ffa85ec7340d392821ecd3405569904cc",
-                {
-                    "ts": 47876
-                },
-                0,
-                {
-                    "enzyme": 0,
-                    "rtl": 0,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "matrix-org/matrix-react-sdk",
-                "99b24851d86e5260dc517f741b423f6f2c9f2c1c",
-                {
-                    "ts": 46855,
-                    "tsx": 98284,
-                    "css": 119,
-                    "js": 22,
-                    "html": 5
-                },
-                0,
-                {
-                    "enzyme": 0,
-                    "rtl": 299,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "vector-im/element-web",
-                "5a7956fd90bde51dc73f6740d1bf9464d0fa785c",
-                {
-                    "ts": 1488,
-                    "tsx": 906,
-                    "html": 1807
-                },
-                0,
-                {
-                    "enzyme": 0,
-                    "rtl": 7,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "vector-im/element-desktop",
-                "831274930b502a12b96e0926478379f7cda1d718",
-                {
-                    "ts": 2170
-                },
-                0,
-                {
-                    "enzyme": 0,
-                    "rtl": 0,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ]
-        ]
-    ],
-    [
         "2024-06-06",
         [
             [
@@ -20873,6 +20806,73 @@
     ],
     [
         "2024-07-25",
+        [
+            [
+                "matrix-org/matrix-js-sdk",
+                "0f08c00c07b9495dd9b8b11f6bc2a8cd0ca105e9",
+                {
+                    "ts": 48756
+                },
+                0,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "matrix-org/matrix-react-sdk",
+                "25ab9e4e914c3de421c4b4d4bc6922889e35e606",
+                {
+                    "ts": 46991,
+                    "tsx": 98832,
+                    "css": 123,
+                    "js": 22,
+                    "html": 5
+                },
+                0,
+                {
+                    "enzyme": 0,
+                    "rtl": 309,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-web",
+                "31345ddd369f199f92beb6f54be5836401fc31dc",
+                {
+                    "ts": 1503,
+                    "tsx": 888,
+                    "html": 1782
+                },
+                0,
+                {
+                    "enzyme": 0,
+                    "rtl": 6,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-desktop",
+                "d7281358da0332d3946395cdb683fb02c60713c7",
+                {
+                    "ts": 2194
+                },
+                0,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ]
+        ]
+    ],
+    [
+        "2024-07-26",
         [
             [
                 "matrix-org/matrix-js-sdk",
