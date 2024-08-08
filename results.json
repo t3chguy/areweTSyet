@@ -21158,7 +21158,7 @@
             ],
             [
                 "matrix-org/matrix-react-sdk",
-                "11cc174d23c6645d1a218e313035621ed3357c06",
+                "ff15249f03fc5624237dbb61e938614b7f2abadf",
                 {
                     "ts": 47316,
                     "tsx": 99088,
@@ -21176,7 +21176,7 @@
             ],
             [
                 "vector-im/element-web",
-                "1e3c1450189dcc54c44dc61494805b18acabb76b",
+                "15cc3fbcf3d07063aa8b91aaea4304a28a40ab47",
                 {
                     "ts": 1503,
                     "tsx": 916,
