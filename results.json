@@ -18192,73 +18192,6 @@
         ]
     ],
     [
-        "2024-07-15",
-        [
-            [
-                "matrix-org/matrix-js-sdk",
-                "30a26813ec4bbc19e715ff0cd24b59240096928b",
-                {
-                    "ts": 48749
-                },
-                0,
-                {
-                    "enzyme": 0,
-                    "rtl": 0,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "matrix-org/matrix-react-sdk",
-                "e6d9eccf1b3dd44e8c842cbf33e9ff4253644347",
-                {
-                    "ts": 46869,
-                    "tsx": 98735,
-                    "css": 123,
-                    "js": 22,
-                    "html": 5
-                },
-                0,
-                {
-                    "enzyme": 0,
-                    "rtl": 307,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "vector-im/element-web",
-                "a10d2b1828725e22a7e8d302de6dea42f772d941",
-                {
-                    "ts": 1490,
-                    "tsx": 888,
-                    "html": 1782
-                },
-                0,
-                {
-                    "enzyme": 0,
-                    "rtl": 6,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ],
-            [
-                "vector-im/element-desktop",
-                "9918467a8d8e0a40d3692bcf51d0d366115bb460",
-                {
-                    "ts": 2194
-                },
-                0,
-                {
-                    "enzyme": 0,
-                    "rtl": 0,
-                    "react_dom": 0,
-                    "matrix_react_test_utils": 0
-                }
-            ]
-        ]
-    ],
-    [
         "2024-07-16",
         [
             [
@@ -21561,6 +21494,73 @@
             [
                 "matrix-org/matrix-react-sdk",
                 "df82c8a84fa1f80073221ba416bf1f81c0102c94",
+                {
+                    "ts": 47437,
+                    "tsx": 99026,
+                    "css": 123,
+                    "js": 22,
+                    "html": 5
+                },
+                0,
+                {
+                    "enzyme": 0,
+                    "rtl": 312,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-web",
+                "5ee3f4cb9e09f7511f284cce0429d017142ef0a1",
+                {
+                    "ts": 1503,
+                    "tsx": 916,
+                    "html": 1782
+                },
+                0,
+                {
+                    "enzyme": 0,
+                    "rtl": 6,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "vector-im/element-desktop",
+                "05735eb62c3391aa3cf2ed46548dfb3729116b5c",
+                {
+                    "ts": 2211
+                },
+                0,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ]
+        ]
+    ],
+    [
+        "2024-09-04",
+        [
+            [
+                "matrix-org/matrix-js-sdk",
+                "f50aab37c315e36f3e12192df974e04bdc8398dc",
+                {
+                    "ts": 49142
+                },
+                0,
+                {
+                    "enzyme": 0,
+                    "rtl": 0,
+                    "react_dom": 0,
+                    "matrix_react_test_utils": 0
+                }
+            ],
+            [
+                "matrix-org/matrix-react-sdk",
+                "9d8c5b6a1cc815e379248ed8ee9fe8363f2b93e3",
                 {
                     "ts": 47437,
                     "tsx": 99026,
