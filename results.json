@@ -21712,9 +21712,9 @@
             ],
             [
                 "vector-im/element-web",
-                "f42f7c923f38b9769ed55b25ced5d9ac10c5acea",
+                "eadff6333b2077f7570af878f34460c1038ef0cf",
                 {
-                    "ts": 1503,
+                    "ts": 1499,
                     "tsx": 916,
                     "html": 1782
                 },
