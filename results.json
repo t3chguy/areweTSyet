@@ -21846,10 +21846,10 @@
             ],
             [
                 "vector-im/element-web",
-                "11d70feb90e554ca4172256150c8db1bac3e772b",
+                "861ac3b50ce7d1371b99f9f2459c59acd8153e6f",
                 {
                     "ts": 1499,
-                    "tsx": 916,
+                    "tsx": 919,
                     "html": 1782
                 },
                 0,
